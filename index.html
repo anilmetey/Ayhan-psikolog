@@ -421,7 +421,7 @@
             </div>
             <button onclick="dismissSplash()" class="btn-solid-dark px-5 py-2.5 rounded-full text-xs tracking-wider uppercase font-semibold flex items-center gap-2 shadow-md">
                 <span>Doğrudan Başla</span>
-                <span class="text-xs">➜</span>
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
         </div>
     </div>
@@ -490,7 +490,7 @@
 
                 <!-- Mobile Hamburger Menu Button -->
                 <button onclick="toggleMobileNav()" class="lg:hidden w-9 h-9 rounded-full bg-white border border-[#D5C0A3] hover:border-[#7C5930] flex items-center justify-center text-[#161412] text-sm shadow-sm transition" aria-label="Menü">
-                    ☰
+                    <svg class="w-4 h-4 text-[#161412]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
                 </button>
             </div>
         </div>
@@ -505,67 +505,133 @@
                      class="w-12 h-12 rounded-full object-cover object-top avatar-logo-ring">
                 <div>
                     <div class="font-bold text-lg sm:text-xl text-[#161412] tracking-tight">Uzm. Psk. Ayhan Altaş</div>
-                    <div class="text-[10px] uppercase tracking-widest text-[#9A7243] font-bold">🩺 Pozitif Yaşam • Bursa Nilüfer</div>
+                    <div class="flex items-center gap-1.5 text-[10px] uppercase tracking-wider text-[#9A7243] font-bold mt-0.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span>
+                        <span>Pozitif Yaşam &bull; Nilüfer, Bursa</span>
+                    </div>
                 </div>
             </div>
-            <button onclick="toggleMobileNav()" class="w-10 h-10 rounded-full bg-[#161412] text-white flex items-center justify-center text-xl cursor-pointer">
-                ✕
+            <button onclick="toggleMobileNav()" class="w-10 h-10 rounded-full bg-[#161412] text-white flex items-center justify-center text-sm cursor-pointer shadow hover:bg-[#7C5930] transition-colors" aria-label="Menüyü Kapat">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
         </div>
 
-        <nav class="flex flex-col gap-2.5 my-4">
-            <a href="#hakkimizda" onclick="toggleMobileNav()" class="p-3.5 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition">
-                <span class="flex items-center gap-3"><span class="text-lg">🏛️</span> <span>Klinik Standartlarımız</span></span>
-                <span class="text-xs text-[#9A7243]">➜</span>
+        <nav class="flex flex-col gap-2 my-4">
+            <a href="#hakkimizda" onclick="toggleMobileNav()" class="p-3 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition group shadow-sm">
+                <span class="flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-xl bg-[#F4EFE6] text-[#7C5930] flex items-center justify-center flex-shrink-0 group-hover:bg-[#9A7243] group-hover:text-white transition-colors">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </span>
+                    <span>Klinik Standartlarımız</span>
+                </span>
+                <svg class="w-4 h-4 text-[#9A7243] group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="#zihin-laboratuvari" onclick="toggleMobileNav()" class="p-3.5 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition">
-                <span class="flex items-center gap-3"><span class="text-lg">🧠</span> <span>3D EMDR Nöro-Rezonans</span></span>
-                <span class="text-xs text-[#9A7243]">➜</span>
+
+            <a href="#zihin-laboratuvari" onclick="toggleMobileNav()" class="p-3 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition group shadow-sm">
+                <span class="flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-xl bg-[#F4EFE6] text-[#7C5930] flex items-center justify-center flex-shrink-0 group-hover:bg-[#9A7243] group-hover:text-white transition-colors">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    </span>
+                    <span>3D EMDR Nöro-Rezonans</span>
+                </span>
+                <svg class="w-4 h-4 text-[#9A7243] group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="#terapi-ritueli" onclick="toggleMobileNav()" class="p-3.5 rounded-2xl bg-[#F2E3CE]/60 border border-[#CEAA7C] flex items-center justify-between font-bold text-sm text-[#7C5930] hover:bg-[#F2E3CE] transition">
-                <span class="flex items-center gap-3"><span class="text-lg">🍃</span> <span>Düşünceyi Akıtma (ACT)</span></span>
-                <span class="text-xs text-[#7C5930]">➜</span>
+
+            <a href="#terapi-ritueli" onclick="toggleMobileNav()" class="p-3 rounded-2xl bg-[#F2E3CE]/70 border border-[#CEAA7C] flex items-center justify-between font-bold text-sm text-[#7C5930] hover:bg-[#F2E3CE] transition group shadow-sm">
+                <span class="flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-xl bg-[#9A7243] text-white flex items-center justify-center flex-shrink-0">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </span>
+                    <span>Düşünceyi Akıtma (ACT)</span>
+                </span>
+                <svg class="w-4 h-4 text-[#7C5930] group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="#terapi-ritueli" onclick="toggleMobileNav(); switchRitualTab('grounding')" class="p-3.5 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition">
-                <span class="flex items-center gap-3"><span class="text-lg">🧘</span> <span>5-4-3-2-1 Panik Topraklama</span></span>
-                <span class="text-xs text-[#9A7243]">➜</span>
+
+            <a href="#terapi-ritueli" onclick="toggleMobileNav(); switchRitualTab('grounding')" class="p-3 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition group shadow-sm">
+                <span class="flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-xl bg-[#F4EFE6] text-[#7C5930] flex items-center justify-center flex-shrink-0 group-hover:bg-[#9A7243] group-hover:text-white transition-colors">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                    </span>
+                    <span>5-4-3-2-1 Panik Topraklama</span>
+                </span>
+                <svg class="w-4 h-4 text-[#9A7243] group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="#uzmanlik" onclick="toggleMobileNav()" class="p-3.5 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition">
-                <span class="flex items-center gap-3"><span class="text-lg">📖</span> <span>"Kaygımı Tanıyorum" Kitabı</span></span>
-                <span class="text-xs text-[#9A7243]">➜</span>
+
+            <a href="#uzmanlik" onclick="toggleMobileNav()" class="p-3 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition group shadow-sm">
+                <span class="flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-xl bg-[#F4EFE6] text-[#7C5930] flex items-center justify-center flex-shrink-0 group-hover:bg-[#9A7243] group-hover:text-white transition-colors">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    </span>
+                    <span>"Kaygımı Tanıyorum" Kitabı</span>
+                </span>
+                <svg class="w-4 h-4 text-[#9A7243] group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="#hizmetler" onclick="toggleMobileNav()" class="p-3.5 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition">
-                <span class="flex items-center gap-3"><span class="text-lg">💼</span> <span>Çalışma Alanlarımız & Terapi</span></span>
-                <span class="text-xs text-[#9A7243]">➜</span>
+
+            <a href="#hizmetler" onclick="toggleMobileNav()" class="p-3 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition group shadow-sm">
+                <span class="flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-xl bg-[#F4EFE6] text-[#7C5930] flex items-center justify-center flex-shrink-0 group-hover:bg-[#9A7243] group-hover:text-white transition-colors">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </span>
+                    <span>Çalışma Alanlarımız & Terapi</span>
+                </span>
+                <svg class="w-4 h-4 text-[#9A7243] group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="#makaleler" onclick="toggleMobileNav()" class="p-3.5 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition">
-                <span class="flex items-center gap-3"><span class="text-lg">📝</span> <span>Klinik Makaleler & Yazılar</span></span>
-                <span class="text-xs text-[#9A7243]">➜</span>
+
+            <a href="#makaleler" onclick="toggleMobileNav()" class="p-3 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition group shadow-sm">
+                <span class="flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-xl bg-[#F4EFE6] text-[#7C5930] flex items-center justify-center flex-shrink-0 group-hover:bg-[#9A7243] group-hover:text-white transition-colors">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </span>
+                    <span>Klinik Makaleler & Yazılar</span>
+                </span>
+                <svg class="w-4 h-4 text-[#9A7243] group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="#danisan-yorumlari" onclick="toggleMobileNav()" class="p-3.5 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition">
-                <span class="flex items-center gap-3"><span class="text-lg">⭐</span> <span>Danışan Yorumları (5.0 ★)</span></span>
-                <span class="text-xs text-[#9A7243]">➜</span>
+
+            <a href="#danisan-yorumlari" onclick="toggleMobileNav()" class="p-3 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition group shadow-sm">
+                <span class="flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-xl bg-[#F4EFE6] text-[#7C5930] flex items-center justify-center flex-shrink-0 group-hover:bg-[#9A7243] group-hover:text-white transition-colors">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </span>
+                    <span>Danışan Yorumları (5.0 / 5)</span>
+                </span>
+                <svg class="w-4 h-4 text-[#9A7243] group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="#sss" onclick="toggleMobileNav()" class="p-3.5 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition">
-                <span class="flex items-center gap-3"><span class="text-lg">❓</span> <span>Sıkça Sorulan Sorular (SSS)</span></span>
-                <span class="text-xs text-[#9A7243]">➜</span>
+
+            <a href="#sss" onclick="toggleMobileNav()" class="p-3 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition group shadow-sm">
+                <span class="flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-xl bg-[#F4EFE6] text-[#7C5930] flex items-center justify-center flex-shrink-0 group-hover:bg-[#9A7243] group-hover:text-white transition-colors">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    </span>
+                    <span>Sıkça Sorulan Sorular (SSS)</span>
+                </span>
+                <svg class="w-4 h-4 text-[#9A7243] group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="#iletisim" onclick="toggleMobileNav()" class="p-3.5 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition">
-                <span class="flex items-center gap-3"><span class="text-lg">📍</span> <span>Konum & Ulaşım Bilgisi</span></span>
-                <span class="text-xs text-[#9A7243]">➜</span>
+
+            <a href="#iletisim" onclick="toggleMobileNav()" class="p-3 rounded-2xl bg-white border border-[#D5C0A3] flex items-center justify-between font-bold text-sm text-[#161412] hover:bg-[#F4EFE6] transition group shadow-sm">
+                <span class="flex items-center gap-3">
+                    <span class="w-8 h-8 rounded-xl bg-[#F4EFE6] text-[#7C5930] flex items-center justify-center flex-shrink-0 group-hover:bg-[#9A7243] group-hover:text-white transition-colors">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </span>
+                    <span>Konum & Ulaşım Bilgisi</span>
+                </span>
+                <svg class="w-4 h-4 text-[#9A7243] group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
         </nav>
 
         <div class="space-y-3 pt-4 border-t border-[#161412]/10">
-            <a href="#randevu-al" onclick="toggleMobileNav()" class="btn-solid-dark block w-full py-4 rounded-2xl font-bold text-center text-sm shadow-lg">
-                📅 Online Randevu Takvimini Aç ➜
+            <a href="#randevu-al" onclick="toggleMobileNav()" class="btn-solid-dark w-full py-3.5 px-4 rounded-2xl font-bold text-center text-xs sm:text-sm shadow-lg flex items-center justify-center gap-2.5">
+                <svg class="w-4 h-4 text-[#CEAA7C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span>Online Randevu Takvimini Aç</span>
+                <svg class="w-4 h-4 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
             <div class="grid grid-cols-2 gap-3 text-xs">
-                <a href="tel:+905370212508" class="btn-solid-cream py-3.5 rounded-xl text-center font-bold flex items-center justify-center gap-2">
-                    <span>📞</span> <span>0537 021 25 08</span>
+                <a href="tel:+905370212508" class="btn-solid-cream py-3 rounded-xl text-center font-bold flex items-center justify-center gap-2 border border-[#D5C0A3]">
+                    <svg class="w-3.5 h-3.5 text-[#7C5930]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>0537 021 25 08</span>
                 </a>
-                <a href="https://wa.me/905370212508" target="_blank" class="py-3.5 rounded-xl bg-[#25D366] text-white text-center font-bold flex items-center justify-center gap-2 shadow">
-                    <span>💬</span> <span>WhatsApp</span>
+                <a href="https://wa.me/905370212508" target="_blank" class="py-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white text-center font-bold flex items-center justify-center gap-2 shadow transition">
+                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.077-1.127-.062-.265-.085-.595-.207-1.03-.397-1.848-.806-3.055-2.677-3.147-2.8-.093-.123-.746-.992-.746-1.893 0-.901.472-1.344.641-1.528.169-.184.368-.23.491-.23.123 0 .245.002.353.007.113.005.263-.043.412.316.153.37.521 1.272.568 1.365.046.092.077.2.015.323s-.092.2-.184.308c-.092.107-.193.24-.276.323-.092.093-.189.194-.082.378.107.184.478.788 1.026 1.274.706.628 1.3.822 1.485.914.184.092.292.077.4-.046.108-.123.461-.538.584-.723.123-.184.246-.153.415-.092.169.061 1.077.508 1.261.6.184.092.307.138.353.215.046.077.046.446-.098.851z"/></svg>
+                    <span>WhatsApp</span>
                 </a>
             </div>
         </div>
@@ -921,9 +987,12 @@
                             <div class="mode-badge w-10 h-10 rounded-xl bg-[#F4EFE6] text-[#332D28] flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
                                 01
                             </div>
-                            <div>
-                                <div class="font-bold text-sm text-[#161412]">Tetiklenme & Kaygı Fırtınası</div>
-                                <div class="text-xs text-[#4A423B] mt-0.5">İşlenmemiş anılar ve panik sinyalleri zihinde düzensiz bir gerilim yaratır.</div>
+                            <div class="space-y-1">
+                                <div class="font-bold text-sm text-[#161412] flex items-center gap-2">
+                                    <span>Tetiklenme & Kaygı Fırtınası</span>
+                                    <span class="px-2 py-0.5 rounded-full bg-[#FCE8E6] text-[#C5221F] text-[9px] uppercase font-bold">Sağ Yarımküre Alarmı</span>
+                                </div>
+                                <div class="text-xs text-[#4A423B]">İşlenmemiş travmatik anılar sağ yarımkürede kilitlenir; amigdala aşırı uyarılır ve bedensel alarm üretir.</div>
                             </div>
                         </button>
 
@@ -931,12 +1000,12 @@
                             <div class="mode-badge w-10 h-10 rounded-xl bg-[#9A7243] text-white flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
                                 02
                             </div>
-                            <div>
+                            <div class="space-y-1">
                                 <div class="font-bold text-sm text-[#161412] flex items-center gap-2">
-                                    <span>EMDR İki Yönlü (Bilateral) Senkronizasyon</span>
+                                    <span>EMDR İki Yönlü Senkronizasyon</span>
                                     <span class="px-2 py-0.5 rounded-full bg-[#F2E3CE] text-[#7C5930] text-[9px] uppercase font-bold">Aktif Simülasyon</span>
                                 </div>
-                                <div class="text-xs text-[#4A423B] mt-0.5">Sağ ve sol beyin yarımküreleri ritmik odakla uyarılır; anının duygusal yükü boşaltılır.</div>
+                                <div class="text-xs text-[#4A423B]">İki yönlü ritmik uyarım ile sağ (duygusal bellek) ve sol (mantık & analiz) yarımküre nöral köprüyle senkronize edilir.</div>
                             </div>
                         </button>
 
@@ -944,9 +1013,12 @@
                             <div class="mode-badge w-10 h-10 rounded-xl bg-[#F4EFE6] text-[#332D28] flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
                                 03
                             </div>
-                            <div>
-                                <div class="font-bold text-sm text-[#161412]">Bilişsel Bütünleşme & Alfa Dengesi</div>
-                                <div class="text-xs text-[#4A423B] mt-0.5">Zihin savunma modundan çıkar; dingin, esnek ve bütünsel bir dengeye kavuşur.</div>
+                            <div class="space-y-1">
+                                <div class="font-bold text-sm text-[#161412] flex items-center gap-2">
+                                    <span>Bilişsel Bütünleşme & Alfa Dengesi</span>
+                                    <span class="px-2 py-0.5 rounded-full bg-[#E6F4EA] text-[#137333] text-[9px] uppercase font-bold">Denge & Entegrasyon</span>
+                                </div>
+                                <div class="text-xs text-[#4A423B]">Sol yarımküre prefrontal korteksiyle anı yeniden anlamlandırılır; savunma kalkar, zihin dingin alfa dengesine geçer.</div>
                             </div>
                         </button>
                     </div>
@@ -974,18 +1046,18 @@
 
                             <!-- Live Interactive Clickable Hemisphere Controls -->
                             <div class="absolute top-16 left-3 sm:left-6 right-3 sm:right-6 z-20 flex items-center justify-between gap-1.5 text-[10px] sm:text-xs font-semibold text-white">
-                                <button type="button" id="hemi-left-ind" onclick="focusHemisphere('left')" title="Sol Yarımküreyi İncele" class="cursor-pointer px-3 sm:px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 border border-white/20 text-white/90 hover:text-white transition-all flex items-center gap-1.5 shadow-sm">
-                                    <span class="w-2 h-2 rounded-full bg-[#E2C7A2]"></span>
+                                <button type="button" id="hemi-left-ind" onclick="focusHemisphere('left')" title="Sol Yarımküreyi İncele (Mantık & Analiz)" class="cursor-pointer px-3 sm:px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 border border-white/20 text-white/90 hover:text-white transition-all flex items-center gap-1.5 shadow-sm">
+                                    <svg class="w-3.5 h-3.5 text-[#E2C7A2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4.5 4.5 0 0 0-4.5 4.5c0 1.25.5 2.4 1.3 3.2A7 7 0 0 0 5 16v1a2 2 0 0 0 2 2h5M12 2v20"/></svg>
                                     <span>Sol Yarımküre (Mantık)</span>
                                 </button>
                                 
                                 <button type="button" id="hemi-center-ind" onclick="focusHemisphere('bilateral')" title="İki Yönlü Senkronizasyonu Başlat" class="cursor-pointer px-3 sm:px-4 py-1.5 rounded-full bg-[#9A7243] hover:bg-[#B88E5B] active:scale-95 border border-[#E2C7A2]/60 text-white font-bold transition-all flex items-center gap-1.5 shadow-md">
-                                    <span class="text-xs">&harr;</span>
+                                    <svg class="w-3.5 h-3.5 text-[#E2C7A2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 16l-4-4 4-4M17 8l4 4-4 4M3 12h18"/></svg>
                                     <span>Bilateral Köprü</span>
                                 </button>
                                 
-                                <button type="button" id="hemi-right-ind" onclick="focusHemisphere('right')" title="Sağ Yarımküreyi İncele" class="cursor-pointer px-3 sm:px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 border border-white/20 text-white/90 hover:text-white transition-all flex items-center gap-1.5 shadow-sm">
-                                    <span class="w-2 h-2 rounded-full bg-[#CEAA7C]"></span>
+                                <button type="button" id="hemi-right-ind" onclick="focusHemisphere('right')" title="Sağ Yarımküreyi İncele (Duygu & Bellek)" class="cursor-pointer px-3 sm:px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 active:scale-95 border border-white/20 text-white/90 hover:text-white transition-all flex items-center gap-1.5 shadow-sm">
+                                    <svg class="w-3.5 h-3.5 text-[#CEAA7C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4.5 4.5 0 0 1 4.5 4.5c0 1.25-.5 2.4-1.3 3.2A7 7 0 0 1 19 16v1a2 2 0 0 1-2 2h-5M12 2v20"/></svg>
                                     <span>Sağ Yarımküre (Duygu)</span>
                                 </button>
                             </div>
@@ -1042,10 +1114,10 @@
             <!-- Section Header -->
             <div class="max-w-3xl mx-auto text-center mb-12 space-y-4 reveal-item">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F2E3CE] border border-[#CEAA7C] text-[#7C5930] text-xs font-semibold tracking-wide">
-                    <span>✨</span>
+                    <svg class="w-3.5 h-3.5 text-[#7C5930]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/><circle cx="12" cy="7" r="3"/></svg>
                     <span>İnteraktif Psikolojik Öz-Düzenleme Alanı</span>
                 </div>
-                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-[#161412] leading-[1.15]">
+                <h2 class="text-3xl sm:text-5xl font-bold text-[#161412] leading-[1.15] tracking-tight">
                     Zihninizi Şimdi ve Burada <br>
                     <span class="text-[#7C5930] font-semibold">Hafifletin & Topraklayın</span>
                 </h2>
@@ -1053,14 +1125,14 @@
                     Seans öncesinde veya gün içinde kaygı yükseldiğinde uygulayabileceğiniz kanıta dayalı iki interaktif klinik çalışma: <strong>ACT Düşünceyi Akıtma Ritüeli</strong> ve <strong>5-4-3-2-1 Panik Topraklama Rehberi</strong>.
                 </p>
 
-                <!-- Interactive Tool Switcher Tabs with Real Emojis -->
+                <!-- Interactive Tool Switcher Tabs with Professional SVGs -->
                 <div class="inline-flex flex-wrap items-center justify-center gap-2 p-1.5 rounded-2xl bg-[#F4EFE6] border border-[#D8CBB8] mt-4">
-                    <button type="button" onclick="switchRitualTab('leaves')" id="tab-btn-leaves" class="btn-solid-dark px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow cursor-pointer">
-                        <span class="text-base">🍃</span>
+                    <button type="button" onclick="switchRitualTab('leaves')" id="tab-btn-leaves" class="btn-solid-dark px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2.5 shadow cursor-pointer">
+                        <svg class="w-4 h-4 text-[#CEAA7C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                         <span>1. Düşünceyi Akıtma Ritüeli (ACT)</span>
                     </button>
-                    <button type="button" onclick="switchRitualTab('grounding')" id="tab-btn-grounding" class="btn-solid-cream px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer">
-                        <span class="text-base">🧘</span>
+                    <button type="button" onclick="switchRitualTab('grounding')" id="tab-btn-grounding" class="btn-solid-cream px-6 py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center gap-2.5 cursor-pointer">
+                        <svg class="w-4 h-4 text-[#7C5930]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
                         <span>2. 5-4-3-2-1 Panik Topraklama</span>
                     </button>
                 </div>
@@ -1082,7 +1154,7 @@
                                 <span class="text-xs font-bold text-[#9A7243]" id="released-counter-badge">0 Düşünce Bırakıldı</span>
                             </div>
 
-                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-[#161412]">
+                            <h3 class="text-2xl sm:text-3xl font-bold text-[#161412] tracking-tight">
                                 Düşünceyi Akıtma Ritüeli
                             </h3>
                             <p class="text-xs sm:text-sm text-[#4A423B] leading-relaxed">
@@ -1092,11 +1164,11 @@
                             <!-- Visual Mode Selector: Leaf on Stream vs Smoke -->
                             <div class="grid grid-cols-2 gap-2.5 pt-1">
                                 <button type="button" onclick="setReleaseVisualStyle('leaf')" id="style-btn-leaf" class="btn-solid-dark py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 cursor-pointer">
-                                    <span class="text-sm">🍂</span>
+                                    <svg class="w-3.5 h-3.5 text-[#E2C7A2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
                                     <span>Nehirde Yaprak</span>
                                 </button>
                                 <button type="button" onclick="setReleaseVisualStyle('smoke')" id="style-btn-smoke" class="btn-solid-cream py-2.5 px-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 cursor-pointer">
-                                    <span class="text-sm">💨</span>
+                                    <svg class="w-3.5 h-3.5 text-[#7C5930]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
                                     <span>Dağılan Duman</span>
                                 </button>
                             </div>
@@ -1131,16 +1203,16 @@
                         <!-- Release CTA Button & Instant Visual Feedback Card -->
                         <div class="pt-4 border-t border-[#E8E0D3] space-y-3">
                             <button type="button" onclick="releaseThoughtNow()" class="btn-solid-bronze btn-shimmer w-full py-4 rounded-2xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg active:scale-95 transition-transform cursor-pointer hover:scale-[1.02]">
-                                <span class="text-base">🍃</span>
+                                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
                                 <span>Düşünceyi Zihinden Bırak & Akıt</span>
-                                <span class="font-bold text-sm">➜</span>
+                                <svg class="w-4 h-4 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </button>
 
                             <!-- Live In-Place Visual Confirmation Card -->
                             <div id="thought-release-feedback" class="hidden p-4 rounded-2xl bg-gradient-to-br from-[#161412] to-[#2B231D] text-white border border-[#CEAA7C] shadow-xl space-y-2.5 transition-all duration-300">
                                 <div class="flex items-center justify-between text-xs">
                                     <div class="flex items-center gap-2 text-[#E2C7A2] font-bold">
-                                        <span class="text-base animate-bounce">🍃</span>
+                                        <svg class="w-4 h-4 text-[#E2C7A2] animate-bounce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
                                         <span>DÜŞÜNCE NEHRE BIRAKILDI</span>
                                     </div>
                                     <span class="px-2 py-0.5 rounded-full bg-white/10 text-[10px] text-[#F2E3CE] font-mono">Bilişsel Ayrışma</span>
@@ -1152,7 +1224,7 @@
                                     <span class="text-[11px] text-white/70">Zihin nehrinde süzülüşü izleyin</span>
                                     <button type="button" onclick="scrollToRiverCanvas()" class="px-3.5 py-1.5 rounded-xl bg-[#9A7243] hover:bg-[#B88E5B] text-white text-[11px] font-bold flex items-center gap-1.5 shadow transition">
                                         <span>Nehre Bak</span>
-                                        <span class="text-xs font-bold">↓</span>
+                                        <span class="text-xs font-bold">&darr;</span>
                                     </button>
                                 </div>
                             </div>
@@ -1175,7 +1247,7 @@
                             </div>
                             <div class="flex items-center gap-2">
                                 <button type="button" onclick="releaseSampleLeaf()" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-[#E2C7A2] border border-[#E2C7A2]/30 text-xs font-bold flex items-center gap-1.5 transition active:scale-95 cursor-pointer">
-                                    <span>✨</span>
+                                    <svg class="w-3.5 h-3.5 text-[#E2C7A2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/><circle cx="12" cy="7" r="3"/></svg>
                                     <span>Hemen Yaprak Bırak</span>
                                 </button>
                             </div>
@@ -1270,10 +1342,10 @@
                                     <span id="grounding-selection-status" class="text-xs font-bold text-[#7C5930]">
                                         Devam etmek için öğelere dokunun (0/5 seçildi)
                                     </span>
-                                    <button type="button" onclick="nextGroundingStep()" id="grounding-next-btn" class="btn-solid-dark px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer shadow-md hover:scale-105 transition-transform">
-                                        <span>🧘</span>
+                                    <button type="button" onclick="nextGroundingStep()" id="grounding-next-btn" class="btn-solid-dark px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2.5 cursor-pointer shadow-md hover:scale-105 transition-transform">
+                                        <svg class="w-4 h-4 text-[#CEAA7C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
                                         <span>Sonraki Duyuya Geç</span>
-                                        <span class="font-bold">➜</span>
+                                        <svg class="w-4 h-4 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                                     </button>
                                 </div>
 
@@ -1388,8 +1460,8 @@
 
                                             <!-- Page Turn Hint / Next Button -->
                                             <div class="pt-2 border-t border-[#E8E0D3] flex items-center justify-between text-[9px] text-[#7C5930]">
-                                                <span class="flex items-center gap-1 font-medium">
-                                                    <span>📖</span>
+                                                <span class="flex items-center gap-1.5 font-medium">
+                                                    <svg class="w-3.5 h-3.5 text-[#7C5930]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
                                                     <span>Sayfayı Çevir</span>
                                                 </span>
                                                 <span class="font-bold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform text-[#161412]">
@@ -1578,10 +1650,10 @@
                         </div>
 
                         <div class="p-6 pt-0">
-                            <button type="button" onclick="selectServiceForAppointment('EMDR Terapisi')" class="btn-solid-dark w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow cursor-pointer hover:scale-[1.02] transition-transform">
-                                <span>📅</span>
+                            <button type="button" onclick="selectServiceForAppointment('EMDR Terapisi')" class="btn-solid-dark w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2.5 shadow cursor-pointer hover:scale-[1.02] transition-transform">
+                                <svg class="w-4 h-4 text-[#CEAA7C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                                 <span>Randevu Planla</span>
-                                <span class="font-bold">➜</span>
+                                <svg class="w-4 h-4 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </button>
                         </div>
                     </div>
@@ -1631,10 +1703,10 @@
                         </div>
 
                         <div class="p-6 pt-0">
-                            <button type="button" onclick="selectServiceForAppointment('Panik Atak & Kaygı Terapisi')" class="btn-solid-dark w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow cursor-pointer hover:scale-[1.02] transition-transform">
-                                <span>📅</span>
+                            <button type="button" onclick="selectServiceForAppointment('Panik Atak & Kaygı Terapisi')" class="btn-solid-dark w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2.5 shadow cursor-pointer hover:scale-[1.02] transition-transform">
+                                <svg class="w-4 h-4 text-[#CEAA7C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                                 <span>Randevu Planla</span>
-                                <span class="font-bold">➜</span>
+                                <svg class="w-4 h-4 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </button>
                         </div>
                     </div>
@@ -1684,10 +1756,10 @@
                         </div>
 
                         <div class="p-6 pt-0">
-                            <button type="button" onclick="selectServiceForAppointment('Klinik Hipnoterapi')" class="btn-solid-dark w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow cursor-pointer hover:scale-[1.02] transition-transform">
-                                <span>📅</span>
+                            <button type="button" onclick="selectServiceForAppointment('Klinik Hipnoterapi')" class="btn-solid-dark w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2.5 shadow cursor-pointer hover:scale-[1.02] transition-transform">
+                                <svg class="w-4 h-4 text-[#CEAA7C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                                 <span>Randevu Planla</span>
-                                <span class="font-bold">➜</span>
+                                <svg class="w-4 h-4 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </button>
                         </div>
                     </div>
@@ -1737,10 +1809,10 @@
                         </div>
 
                         <div class="p-6 pt-0">
-                            <button type="button" onclick="selectServiceForAppointment('Çift & Aile Danışmanlığı')" class="btn-solid-dark w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow cursor-pointer hover:scale-[1.02] transition-transform">
-                                <span>📅</span>
+                            <button type="button" onclick="selectServiceForAppointment('Çift & Aile Danışmanlığı')" class="btn-solid-dark w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2.5 shadow cursor-pointer hover:scale-[1.02] transition-transform">
+                                <svg class="w-4 h-4 text-[#CEAA7C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                                 <span>Randevu Planla</span>
-                                <span class="font-bold">➜</span>
+                                <svg class="w-4 h-4 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </button>
                         </div>
                     </div>
@@ -1790,10 +1862,10 @@
                         </div>
 
                         <div class="p-6 pt-0">
-                            <button type="button" onclick="selectServiceForAppointment('OKB & Takıntı Terapisi')" class="btn-solid-dark w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow cursor-pointer hover:scale-[1.02] transition-transform">
-                                <span>📅</span>
+                            <button type="button" onclick="selectServiceForAppointment('OKB & Takıntı Terapisi')" class="btn-solid-dark w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2.5 shadow cursor-pointer hover:scale-[1.02] transition-transform">
+                                <svg class="w-4 h-4 text-[#CEAA7C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                                 <span>Randevu Planla</span>
-                                <span class="font-bold">➜</span>
+                                <svg class="w-4 h-4 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </button>
                         </div>
                     </div>
@@ -1843,10 +1915,10 @@
                         </div>
 
                         <div class="p-6 pt-0">
-                            <button type="button" onclick="selectServiceForAppointment('Online Danışmanlık')" class="btn-solid-bronze w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow cursor-pointer hover:scale-[1.02] transition-transform">
-                                <span>💻</span>
+                            <button type="button" onclick="selectServiceForAppointment('Online Danışmanlık')" class="btn-solid-bronze w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2.5 shadow cursor-pointer hover:scale-[1.02] transition-transform">
+                                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
                                 <span>Online Seans Ayarla</span>
-                                <span class="font-bold">➜</span>
+                                <svg class="w-4 h-4 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </button>
                         </div>
                     </div>
@@ -1864,8 +1936,9 @@
                                 <span class="px-3 py-1 rounded-full bg-[#161412] text-[#E2C7A2] text-[10px] font-bold uppercase tracking-wider">
                                     12–18 Yaş Genç Danışmanlığı
                                 </span>
-                                <span class="text-xs font-bold text-[#7C5930] flex items-center gap-1">
-                                    <span>🎯</span> <span>LGS & YKS Odaklı</span>
+                                <span class="text-xs font-bold text-[#7C5930] flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5 text-[#7C5930]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                                    <span>LGS & YKS Odaklı</span>
                                 </span>
                             </div>
                             <h3 class="font-serif font-bold text-xl sm:text-2xl text-[#161412]">
@@ -1875,16 +1948,16 @@
                                 Sınav stresi, performans blokajı, ergenlik dönemi öfke patlamaları ve aile içi iletişim tıkanıklıklarında EMDR ve BDT temelli kanıta dayalı klinik rehberlik.
                             </p>
                             <div class="flex flex-wrap gap-2 pt-1 text-[11px] text-[#332D28] font-medium">
-                                <span class="px-2.5 py-1 rounded-lg bg-white border border-[#D5C0A3]">✓ Sınav Performans Blokajı</span>
-                                <span class="px-2.5 py-1 rounded-lg bg-white border border-[#D5C0A3]">✓ Ergenlik Öfke & Uyum</span>
-                                <span class="px-2.5 py-1 rounded-lg bg-white border border-[#D5C0A3]">✓ Sağlıklı Ebeveyn İletişimi</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white border border-[#D5C0A3] flex items-center gap-1.5"><svg class="w-3 h-3 text-[#10B981]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Sınav Performans Blokajı</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white border border-[#D5C0A3] flex items-center gap-1.5"><svg class="w-3 h-3 text-[#10B981]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Ergenlik Öfke & Uyum</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white border border-[#D5C0A3] flex items-center gap-1.5"><svg class="w-3 h-3 text-[#10B981]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Sağlıklı Ebeveyn İletişimi</span>
                             </div>
                         </div>
                         <div class="pt-2">
-                            <button type="button" onclick="selectServiceForAppointment('Ergen & Sınav Kaygısı')" class="btn-solid-dark w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow cursor-pointer hover:scale-[1.01] transition-transform">
-                                <span>📅</span>
+                            <button type="button" onclick="selectServiceForAppointment('Ergen & Sınav Kaygısı')" class="btn-solid-dark w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2.5 shadow cursor-pointer hover:scale-[1.01] transition-transform">
+                                <svg class="w-4 h-4 text-[#CEAA7C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                                 <span>Ergen Seansı Randevusu Oluştur</span>
-                                <span class="font-bold">➜</span>
+                                <svg class="w-4 h-4 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </button>
                         </div>
                     </div>
@@ -1898,8 +1971,9 @@
                                 <span class="px-3 py-1 rounded-full bg-[#7C5930] text-white text-[10px] font-bold uppercase tracking-wider">
                                     Pozitif Yaşam Akademi
                                 </span>
-                                <span class="text-xs font-bold text-[#7C5930] flex items-center gap-1">
-                                    <span>🎓</span> <span>Uzman & Kurumsal</span>
+                                <span class="text-xs font-bold text-[#7C5930] flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5 text-[#7C5930]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                                    <span>Uzman & Kurumsal</span>
                                 </span>
                             </div>
                             <h3 class="font-serif font-bold text-xl sm:text-2xl text-[#161412]">
@@ -1909,16 +1983,16 @@
                                 Ruh sağlığı uzmanlarına yönelik Analitik Hipnoterapi ve EMDR vaka eğitimleri; kurum ve okullara özel &ldquo;Kaygımı Tanıyorum&rdquo; ve &ldquo;Kontrol Kimde&rdquo; seminerleri.
                             </p>
                             <div class="flex flex-wrap gap-2 pt-1 text-[11px] text-[#332D28] font-medium">
-                                <span class="px-2.5 py-1 rounded-lg bg-white border border-[#D5C0A3]">✓ Analitik Hipnoz Eğitimi</span>
-                                <span class="px-2.5 py-1 rounded-lg bg-white border border-[#D5C0A3]">✓ &ldquo;Kaygımı Tanıyorum&rdquo; Semineri</span>
-                                <span class="px-2.5 py-1 rounded-lg bg-white border border-[#D5C0A3]">✓ Kurumsal Stres Yönetimi</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white border border-[#D5C0A3] flex items-center gap-1.5"><svg class="w-3 h-3 text-[#10B981]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Analitik Hipnoz Eğitimi</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white border border-[#D5C0A3] flex items-center gap-1.5"><svg class="w-3 h-3 text-[#10B981]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> &ldquo;Kaygımı Tanıyorum&rdquo; Semineri</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-white border border-[#D5C0A3] flex items-center gap-1.5"><svg class="w-3 h-3 text-[#10B981]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Kurumsal Stres Yönetimi</span>
                             </div>
                         </div>
                         <div class="pt-2">
-                            <a href="https://wa.me/905370212508?text=Merhaba%20Ayhan%20Bey,%20mesleki%20e%C4%9Fitimleriniz%20ve%20kurumsal%20seminerleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="btn-solid-cream w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 border border-[#CEAA7C] shadow cursor-pointer hover:scale-[1.01] transition-transform">
-                                <span>💬</span>
+                            <a href="https://wa.me/905370212508?text=Merhaba%20Ayhan%20Bey,%20mesleki%20e%C4%9Fitimleriniz%20ve%20kurumsal%20seminerleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="btn-solid-cream w-full py-3.5 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2.5 border border-[#CEAA7C] shadow cursor-pointer hover:scale-[1.01] transition-transform">
+                                <svg class="w-4 h-4 fill-[#25D366]" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.077-1.127-.062-.265-.085-.595-.207-1.03-.397-1.848-.806-3.055-2.677-3.147-2.8-.093-.123-.746-.992-.746-1.893 0-.901.472-1.344.641-1.528.169-.184.368-.23.491-.23.123 0 .245.002.353.007.113.005.263-.043.412.316.153.37.521 1.272.568 1.365.046.092.077.2.015.323s-.092.2-.184.308c-.092.107-.193.24-.276.323-.092.093-.189.194-.082.378.107.184.478.788 1.026 1.274.706.628 1.3.822 1.485.914.184.092.292.077.4-.046.108-.123.461-.538.584-.723.123-.184.246-.153.415-.092.169.061 1.077.508 1.261.6.184.092.307.138.353.215.046.077.046.446-.098.851z"/></svg>
                                 <span>Eğitim & Seminer Bilgisi Al</span>
-                                <span class="font-bold">➜</span>
+                                <svg class="w-4 h-4 text-[#7C5930]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </a>
                         </div>
                     </div>
@@ -1937,7 +2011,7 @@
             <!-- Section Header with Badges -->
             <div class="max-w-3xl mx-auto text-center mb-16 space-y-4 reveal-item">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F2E3CE] border border-[#CEAA7C] text-[#7C5930] text-xs font-semibold tracking-wide">
-                    <span>⭐</span>
+                    <svg class="w-3.5 h-3.5 text-[#9A7243]" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                     <span>Doğrulanmış Danışan Deneyimleri</span>
                 </div>
                 
@@ -1992,8 +2066,9 @@
                                     <div class="text-[10px] text-[#7C5930]">Nilüfer, Bursa &bull; Google Yorumu</div>
                                 </div>
                             </div>
-                            <span class="text-[11px] text-emerald-600 font-bold flex items-center gap-1">
-                                <span>✓</span> Doğrulanmış
+                            <span class="text-[11px] text-emerald-600 font-bold flex items-center gap-1.5">
+                                <svg class="w-3 h-3 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Doğrulanmış</span>
                             </span>
                         </div>
                     </div>
@@ -2023,8 +2098,9 @@
                                     <div class="text-[10px] text-[#7C5930]">Osmangazi, Bursa &bull; Doktortakvimi</div>
                                 </div>
                             </div>
-                            <span class="text-[11px] text-emerald-600 font-bold flex items-center gap-1">
-                                <span>✓</span> Doğrulanmış
+                            <span class="text-[11px] text-emerald-600 font-bold flex items-center gap-1.5">
+                                <svg class="w-3 h-3 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Doğrulanmış</span>
                             </span>
                         </div>
                     </div>
@@ -2054,8 +2130,9 @@
                                     <div class="text-[10px] text-[#7C5930]">Nilüfer, Bursa &bull; Google Yorumu</div>
                                 </div>
                             </div>
-                            <span class="text-[11px] text-emerald-600 font-bold flex items-center gap-1">
-                                <span>✓</span> Doğrulanmış
+                            <span class="text-[11px] text-emerald-600 font-bold flex items-center gap-1.5">
+                                <svg class="w-3 h-3 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Doğrulanmış</span>
                             </span>
                         </div>
                     </div>
@@ -2085,8 +2162,9 @@
                                     <div class="text-[10px] text-[#7C5930]">Stuttgart &bull; Online Danışan</div>
                                 </div>
                             </div>
-                            <span class="text-[11px] text-emerald-600 font-bold flex items-center gap-1">
-                                <span>✓</span> Doğrulanmış
+                            <span class="text-[11px] text-emerald-600 font-bold flex items-center gap-1.5">
+                                <svg class="w-3 h-3 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Doğrulanmış</span>
                             </span>
                         </div>
                     </div>
@@ -2116,8 +2194,9 @@
                                     <div class="text-[10px] text-[#7C5930]">Bursa &bull; Doktortakvimi</div>
                                 </div>
                             </div>
-                            <span class="text-[11px] text-emerald-600 font-bold flex items-center gap-1">
-                                <span>✓</span> Doğrulanmış
+                            <span class="text-[11px] text-emerald-600 font-bold flex items-center gap-1.5">
+                                <svg class="w-3 h-3 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Doğrulanmış</span>
                             </span>
                         </div>
                     </div>
@@ -2147,8 +2226,9 @@
                                     <div class="text-[10px] text-[#7C5930]">Nilüfer, Bursa &bull; Google Yorumu</div>
                                 </div>
                             </div>
-                            <span class="text-[11px] text-emerald-600 font-bold flex items-center gap-1">
-                                <span>✓</span> Doğrulanmış
+                            <span class="text-[11px] text-emerald-600 font-bold flex items-center gap-1.5">
+                                <svg class="w-3 h-3 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Doğrulanmış</span>
                             </span>
                         </div>
                     </div>
@@ -2158,10 +2238,10 @@
 
             <!-- Bottom CTA Pill -->
             <div class="mt-12 text-center">
-                <a href="#randevu-al" class="btn-solid-dark btn-shimmer inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg hover:scale-105 transition-transform">
-                    <span>📅</span>
+                <a href="#randevu-al" class="btn-solid-dark btn-shimmer inline-flex items-center gap-3 px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg hover:scale-105 transition-transform">
+                    <svg class="w-4 h-4 text-[#CEAA7C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                     <span>Siz de İyileşme Yolculuğunuzu Başlatın</span>
-                    <span class="font-bold">➜</span>
+                    <svg class="w-4 h-4 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
             </div>
 
@@ -2331,10 +2411,10 @@
                             </p>
                         </div>
                         <div class="pt-3 border-t border-white/20">
-                            <a href="https://www.youtube.com/@Psikoterapist" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-[#EF4444] hover:bg-[#DC2626] text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg transition-colors">
-                                <span>▶</span>
+                            <a href="https://www.youtube.com/@Psikoterapist" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-4 rounded-xl bg-[#EF4444] hover:bg-[#DC2626] text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg transition-colors">
+                                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                                 <span>YouTube Kanalında İzleyin</span>
-                                <span>&rarr;</span>
+                                <svg class="w-3.5 h-3.5 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </a>
                         </div>
                     </div>
@@ -2353,7 +2433,7 @@
             
             <div class="text-center space-y-3 reveal-item">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F2E3CE] border border-[#CEAA7C] text-[#7C5930] text-xs font-semibold tracking-wide">
-                    <span>❓</span>
+                    <svg class="w-3.5 h-3.5 text-[#7C5930]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                     <span>Klinik Süreç Rehberi</span>
                 </div>
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#161412] tracking-tight">
@@ -2579,7 +2659,7 @@
                         <div class="flex justify-end pt-4">
                             <button type="button" onclick="goToStep(2)" class="btn-solid-dark btn-shimmer px-7 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-md">
                                 <span>Sonraki Adım: Uzman & Protokol</span>
-                                <span class="font-bold">➜</span>
+                                <svg class="w-4 h-4 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </button>
                         </div>
                     </div>
@@ -2617,7 +2697,7 @@
                             </button>
                             <button type="button" onclick="goToStep(3)" class="btn-solid-dark btn-shimmer px-7 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-md">
                                 <span>Sonraki Adım: Görüşme Türü</span>
-                                <span class="font-bold">➜</span>
+                                <svg class="w-4 h-4 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </button>
                         </div>
                     </div>
@@ -2656,7 +2736,7 @@
                             </button>
                             <button type="button" onclick="goToStep(4)" class="btn-solid-dark btn-shimmer px-7 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-md">
                                 <span>Sonraki Adım: Tarih & Saat</span>
-                                <span class="font-bold">➜</span>
+                                <svg class="w-4 h-4 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </button>
                         </div>
                     </div>
@@ -2726,15 +2806,15 @@
                             </button>
                             
                             <div class="flex items-center gap-3 w-full sm:w-auto order-1 sm:order-2">
-                                <button type="button" onclick="submitAppointment('whatsapp')" class="btn-solid-bronze btn-shimmer flex-1 sm:flex-initial px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg cursor-pointer hover:scale-[1.02] transition-transform">
-                                    <span class="text-base">💬</span>
+                                <button type="button" onclick="submitAppointment('whatsapp')" class="btn-solid-bronze btn-shimmer flex-1 sm:flex-initial px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg cursor-pointer hover:scale-[1.02] transition-transform">
+                                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.077-1.127-.062-.265-.085-.595-.207-1.03-.397-1.848-.806-3.055-2.677-3.147-2.8-.093-.123-.746-.992-.746-1.893 0-.901.472-1.344.641-1.528.169-.184.368-.23.491-.23.123 0 .245.002.353.007.113.005.263-.043.412.316.153.37.521 1.272.568 1.365.046.092.077.2.015.323s-.092.2-.184.308c-.092.107-.193.24-.276.323-.092.093-.189.194-.082.378.107.184.478.788 1.026 1.274.706.628 1.3.822 1.485.914.184.092.292.077.4-.046.108-.123.461-.538.584-.723.123-.184.246-.153.415-.092.169.061 1.077.508 1.261.6.184.092.307.138.353.215.046.077.046.446-.098.851z"/></svg>
                                     <span>WhatsApp ile İlet</span>
-                                    <span class="font-bold">➜</span>
+                                    <svg class="w-4 h-4 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                                 </button>
-                                <button type="button" onclick="submitAppointment('direct')" class="btn-solid-dark btn-shimmer flex-1 sm:flex-initial px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg cursor-pointer hover:scale-[1.02] transition-transform">
-                                    <span class="text-base">✅</span>
+                                <button type="button" onclick="submitAppointment('direct')" class="btn-solid-dark btn-shimmer flex-1 sm:flex-initial px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg cursor-pointer hover:scale-[1.02] transition-transform">
+                                    <svg class="w-4 h-4 text-[#CEAA7C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                     <span>Talebi Tamamla</span>
-                                    <span class="font-bold">➜</span>
+                                    <svg class="w-4 h-4 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                                 </button>
                             </div>
                         </div>
@@ -2858,15 +2938,15 @@
 
                     </div>
 
-                    <!-- Solid High-Contrast CTAs with Native Emojis -->
+                    <!-- Solid High-Contrast CTAs with Vector Icons -->
                     <div class="grid sm:grid-cols-2 gap-3.5 pt-3">
                         <a href="https://maps.google.com/?q=Pozitif+Yasam+Psikolojik+Danismanlik+Nilufer+Bursa" target="_blank" class="btn-solid-dark btn-shimmer px-6 py-4 rounded-2xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg cursor-pointer hover:scale-[1.02] transition-transform">
-                            <span class="text-base">📍</span>
+                            <svg class="w-4 h-4 text-[#E2C7A2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                             <span>Google Haritalar'da Aç</span>
                             <span class="font-bold">&rarr;</span>
                         </a>
                         <a href="https://wa.me/905370212508?text=Merhaba%20Ayhan%20Bey,%20randevu%20ve%20konum%20bilgisi%20almak%20istiyorum." target="_blank" class="btn-solid-bronze btn-shimmer px-6 py-4 rounded-2xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg cursor-pointer hover:scale-[1.02] transition-transform">
-                            <span class="text-base">💬</span>
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.077-1.127-.062-.265-.085-.595-.207-1.03-.397-1.848-.806-3.055-2.677-3.147-2.8-.093-.123-.746-.992-.746-1.893 0-.901.472-1.344.641-1.528.169-.184.368-.23.491-.23.123 0 .245.002.353.007.113.005.263-.043.412.316.153.37.521 1.272.568 1.365.046.092.077.2.015.323s-.092.2-.184.308c-.092.107-.193.24-.276.323-.092.093-.189.194-.082.378.107.184.478.788 1.026 1.274.706.628 1.3.822 1.485.914.184.092.292.077.4-.046.108-.123.461-.538.584-.723.123-.184.246-.153.415-.092.169.061 1.077.508 1.261.6.184.092.307.138.353.215.046.077.046.446-.098.851z"/></svg>
                             <span>WhatsApp Danışma</span>
                             <span class="font-bold">&rarr;</span>
                         </a>
@@ -2961,7 +3041,7 @@
                 </div>
                 <div class="flex flex-wrap items-center justify-center gap-3">
                     <a href="tel:+905370212508" class="btn-solid-cream px-5 py-3.5 rounded-full text-xs font-bold flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform shadow-sm">
-                        <span class="text-base">📞</span>
+                        <svg class="w-4 h-4 text-[#7C5930]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                         <span>0537 021 25 08</span>
                     </a>
                     <a href="#randevu-al" class="btn-solid-bronze px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer hover:scale-105 transition-transform shadow-lg">
@@ -2990,19 +3070,19 @@
                     </p>
                     <div class="flex flex-wrap items-center gap-2 pt-1">
                         <a href="https://www.instagram.com/psk.ayhanaltas" target="_blank" class="px-3 py-1.5 rounded-full bg-white/15 hover:bg-white/25 text-xs font-semibold text-white flex items-center gap-1.5 border border-white/20 transition shadow-sm">
-                            <span class="text-[#E2C7A2]">📷</span>
+                            <svg class="w-3.5 h-3.5 text-[#E2C7A2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                             <span>Instagram</span>
                         </a>
                         <a href="https://www.youtube.com/@Psikoterapist" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-full bg-white/15 hover:bg-white/25 text-xs font-semibold text-white flex items-center gap-1.5 border border-white/20 transition shadow-sm">
-                            <span class="text-[#EF4444]">▶</span>
+                            <svg class="w-3.5 h-3.5 text-[#EF4444] fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                             <span>YouTube</span>
                         </a>
                         <a href="https://www.doktortakvimi.com/ayhan-altas/psikoloji/bursa" target="_blank" class="px-3 py-1.5 rounded-full bg-white/15 hover:bg-white/25 text-xs font-semibold text-white flex items-center gap-1.5 border border-white/20 transition shadow-sm">
-                            <span class="text-[#3B82F6]">🩺</span>
+                            <svg class="w-3.5 h-3.5 text-[#3B82F6]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09zM12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><line x1="8" y1="2" x2="8" y2="5"/><line x1="16" y1="2" x2="16" y2="5"/></svg>
                             <span>DoktorTakvimi</span>
                         </a>
                         <a href="https://www.facebook.com/bursapsikolog" target="_blank" class="px-3 py-1.5 rounded-full bg-white/15 hover:bg-white/25 text-xs font-semibold text-white flex items-center gap-1.5 border border-white/20 transition shadow-sm">
-                            <span class="text-[#E2C7A2]">🌐</span>
+                            <svg class="w-3.5 h-3.5 text-[#E2C7A2] fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                             <span>Facebook</span>
                         </a>
                     </div>
@@ -3032,7 +3112,7 @@
                         <li><a href="#terapi-ritueli" onclick="switchRitualTab('grounding')" class="hover:text-[#CEAA7C] transition block">5-4-3-2-1 Topraklama</a></li>
                         <li><a href="#uzmanlik" class="hover:text-[#CEAA7C] transition block">"Kaygımı Tanıyorum"</a></li>
                         <li><a href="#makaleler" class="hover:text-[#CEAA7C] transition block">Klinik Makaleler & Yazılar</a></li>
-                        <li><a href="#danisan-yorumlari" class="hover:text-[#CEAA7C] transition block">Danışan Yorumları (5.0 ★)</a></li>
+                        <li><a href="#danisan-yorumlari" class="hover:text-[#CEAA7C] transition block">Danışan Yorumları (5.0 / 5)</a></li>
                         <li><a href="#sss" class="hover:text-[#CEAA7C] transition block">Sıkça Sorulan Sorular</a></li>
                         <li><a href="#randevu-al" class="hover:text-[#CEAA7C] transition block font-medium text-[#CEAA7C]">Randevu Takvimi &rarr;</a></li>
                     </ul>
@@ -3070,18 +3150,18 @@
         </div>
     </footer>
 
-    <!-- MOBILE QUICK ACCESS FLOATING DOCK WITH NATIVE EMOJIS -->
-    <div class="lg:hidden fixed bottom-3 left-3 right-3 z-40 glass-luminous rounded-full p-2 shadow-2xl flex items-center justify-between gap-2 border border-[#D5C0A3]">
-        <a href="tel:+905370212508" class="btn-solid-cream flex-1 py-2.5 rounded-full text-xs font-bold text-center flex items-center justify-center gap-1.5">
-            <span class="text-sm">📞</span>
+    <!-- MOBILE QUICK ACCESS FLOATING DOCK (Ultra-Clean, Professional SVGs) -->
+    <div class="lg:hidden fixed bottom-3 left-3 right-3 z-40 glass-luminous rounded-full p-2 shadow-2xl flex items-center justify-between gap-2 border border-[#D5C0A3]/90 bg-white/95 backdrop-blur-xl">
+        <a href="tel:+905370212508" class="btn-solid-cream flex-1 py-2.5 rounded-full text-xs font-bold text-center flex items-center justify-center gap-2 border border-[#D5C0A3]/80 transition hover:bg-[#F4EFE6]">
+            <svg class="w-3.5 h-3.5 text-[#7C5930]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <span>Ara</span>
         </a>
-        <a href="https://wa.me/905370212508" target="_blank" class="btn-solid-bronze flex-1 py-2.5 rounded-full text-xs font-bold text-center flex items-center justify-center gap-1.5 shadow">
-            <span class="text-sm">💬</span>
+        <a href="https://wa.me/905370212508" target="_blank" class="flex-1 py-2.5 rounded-full text-xs font-bold text-center flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white shadow transition">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.077-1.127-.062-.265-.085-.595-.207-1.03-.397-1.848-.806-3.055-2.677-3.147-2.8-.093-.123-.746-.992-.746-1.893 0-.901.472-1.344.641-1.528.169-.184.368-.23.491-.23.123 0 .245.002.353.007.113.005.263-.043.412.316.153.37.521 1.272.568 1.365.046.092.077.2.015.323s-.092.2-.184.308c-.092.107-.193.24-.276.323-.092.093-.189.194-.082.378.107.184.478.788 1.026 1.274.706.628 1.3.822 1.485.914.184.092.292.077.4-.046.108-.123.461-.538.584-.723.123-.184.246-.153.415-.092.169.061 1.077.508 1.261.6.184.092.307.138.353.215.046.077.046.446-.098.851z"/></svg>
             <span>WhatsApp</span>
         </a>
-        <a href="#randevu-al" class="btn-solid-dark flex-1 py-2.5 rounded-full text-xs font-bold text-center flex items-center justify-center gap-1.5 shadow">
-            <span class="text-sm">📅</span>
+        <a href="#randevu-al" class="btn-solid-dark flex-1 py-2.5 rounded-full text-xs font-bold text-center flex items-center justify-center gap-2 shadow">
+            <svg class="w-3.5 h-3.5 text-[#CEAA7C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             <span>Randevu</span>
         </a>
     </div>
@@ -3465,16 +3545,16 @@
                 if (neuroFocusSide === 'left') {
                     ctx.save();
                     ctx.fillStyle = 'rgba(226, 199, 162, 0.95)';
-                    ctx.font = '600 11px "Manrope", sans-serif';
+                    ctx.font = '600 11px "Plus Jakarta Sans", sans-serif';
                     ctx.textAlign = 'left';
-                    ctx.fillText('⚡ SOL YARIMKÜRE: MANTIK & ANALİZ ODAKLANDI', 24, height - 20);
+                    ctx.fillText('SOL YARIMKÜRE: MANTIK & ANALİZ (PREFRONTAL KORTEKS)', 24, height - 20);
                     ctx.restore();
                 } else if (neuroFocusSide === 'right') {
                     ctx.save();
                     ctx.fillStyle = 'rgba(255, 184, 153, 0.95)';
-                    ctx.font = '600 11px "Manrope", sans-serif';
+                    ctx.font = '600 11px "Plus Jakarta Sans", sans-serif';
                     ctx.textAlign = 'right';
-                    ctx.fillText('⚡ SAĞ YARIMKÜRE: DUYGU & AMİGDALA ODAKLANDI', width - 24, height - 20);
+                    ctx.fillText('SAĞ YARIMKÜRE: DUYGU & BELLEK (AMİGDALA)', width - 24, height - 20);
                     ctx.restore();
                 }
 
@@ -4629,9 +4709,9 @@
 
         <!-- Outside Visible Trigger Button: Clearly says 'Duygunu Seç' with sparkle icon -->
         <button type="button" id="atmosphere-toggle" class="atmosphere-toggle" aria-expanded="false" aria-haspopup="true" onclick="toggleAtmosphere(event)" title="Sayfa rengini duygunuza göre değiştirin">
-            <span class="atmosphere-toggle-icon">✦</span>
+            <svg class="w-3.5 h-3.5 text-[#7C5930] atmosphere-toggle-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg>
             <span id="atmosphere-toggle-text" class="atmosphere-toggle-text">Duygunu Seç</span>
-            <span class="atmosphere-toggle-arrow">▾</span>
+            <svg class="w-3 h-3 text-[#7C5930] atmosphere-toggle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
     </div>
 
