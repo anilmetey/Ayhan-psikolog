@@ -1,0 +1,412 @@
+/* ==========================================================================
+   Atmosphere Emotion-Based Ambient System (atmosphere.css)
+   Pure CSS • 1.2s ease-out transitions • WCAG AA compliant pastel palettes
+   ========================================================================== */
+
+:root,
+[data-atmosphere="huzurlu"] {
+    --bg: #FBF8F3;
+    --bg-surface: rgba(255, 255, 255, 0.92);
+    --bg-subtle: #F4EFE6;
+    --border-ambient: #E8E0D3;
+    --accent: #7C5930;
+    --accent-soft: #F2E3CE;
+    --blob-1: rgba(226, 199, 162, 0.40);
+    --blob-2: rgba(184, 142, 91, 0.25);
+    --blob-3: rgba(244, 239, 230, 0.55);
+    --blob-speed: 36s;
+}
+
+[data-atmosphere="yorgun"] {
+    --bg: #FAF5EB;
+    --bg-surface: rgba(255, 253, 248, 0.92);
+    --bg-subtle: #F3EBDD;
+    --border-ambient: #E8DEC8;
+    --accent: #8C5E2E;
+    --accent-soft: #F3E3CA;
+    --blob-1: rgba(235, 204, 160, 0.38);
+    --blob-2: rgba(224, 185, 132, 0.26);
+    --blob-3: rgba(247, 236, 218, 0.52);
+    --blob-speed: 38s;
+}
+
+[data-atmosphere="kaygili"] {
+    --bg: #F2F6F3;
+    --bg-surface: rgba(253, 255, 253, 0.92);
+    --bg-subtle: #E5EDE7;
+    --border-ambient: #D5E0D8;
+    --accent: #3F634B;
+    --accent-soft: #D9E8DD;
+    --blob-1: rgba(168, 196, 178, 0.38);
+    --blob-2: rgba(142, 174, 153, 0.26);
+    --blob-3: rgba(215, 232, 222, 0.52);
+    --blob-speed: 55s; /* Extra slow for anxiety reduction */
+}
+
+[data-atmosphere="huzunlu"] {
+    --bg: #F1F4F7;
+    --bg-surface: rgba(252, 254, 255, 0.92);
+    --bg-subtle: #E4E9EF;
+    --border-ambient: #D3DBE4;
+    --accent: #455870;
+    --accent-soft: #D7E0EB;
+    --blob-1: rgba(176, 194, 214, 0.38);
+    --blob-2: rgba(152, 172, 196, 0.26);
+    --blob-3: rgba(220, 228, 238, 0.52);
+    --blob-speed: 42s;
+}
+
+[data-atmosphere="enerjik"] {
+    --bg: #FCF6F1;
+    --bg-surface: rgba(255, 253, 251, 0.92);
+    --bg-subtle: #F7EAE0;
+    --border-ambient: #EAD6C6;
+    --accent: #945432;
+    --accent-soft: #F7DFCE;
+    --blob-1: rgba(245, 198, 170, 0.38);
+    --blob-2: rgba(240, 210, 150, 0.26);
+    --blob-3: rgba(254, 234, 222, 0.52);
+    --blob-speed: 32s;
+}
+
+/* ==========================================================================
+   Smooth 1.2s Color Transitions (Without Touching Layout or Sizes)
+   ========================================================================== */
+
+html,
+body,
+section,
+header,
+footer {
+    transition: background-color 1.2s ease-out, border-color 1.2s ease-out, color 1.2s ease-out !important;
+}
+
+body {
+    background-color: var(--bg) !important;
+}
+
+/* Connect section backgrounds to ambient variables */
+section.bg-\[\#FBF8F3\],
+section[class*="bg-[#FBF8F3]"] {
+    background-color: var(--bg) !important;
+}
+
+section.bg-white,
+section[class*="bg-white"] {
+    background-color: var(--bg-surface) !important;
+    border-color: var(--border-ambient) !important;
+}
+
+/* Subtle accent color harmonization */
+.text-\[\#7C5930\] {
+    color: var(--accent) !important;
+    transition: color 1.2s ease-out;
+}
+
+.text-\[\#9A7243\] {
+    color: var(--accent) !important;
+    transition: color 1.2s ease-out;
+}
+
+.bg-\[\#F2E3CE\] {
+    background-color: var(--accent-soft) !important;
+    transition: background-color 1.2s ease-out;
+}
+
+.border-\[\#E8E0D3\] {
+    border-color: var(--border-ambient) !important;
+    transition: border-color 1.2s ease-out;
+}
+
+/* ==========================================================================
+   Fixed Background Ambient Blob Layer (z-index: -1, pointer-events: none)
+   ========================================================================== */
+
+.atmosphere-stage {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+    filter: blur(100px);
+    -webkit-filter: blur(100px);
+    opacity: 0.85;
+    transition: opacity 1.2s ease-out;
+}
+
+.atmosphere-blob {
+    position: absolute;
+    border-radius: 50%;
+    will-change: transform;
+    transition: background-color 1.2s ease-out;
+}
+
+.atmosphere-blob-1 {
+    width: 46vw;
+    height: 46vw;
+    min-width: 320px;
+    min-height: 320px;
+    top: -8vw;
+    left: -4vw;
+    background-color: var(--blob-1);
+    animation: atmosphereFloat1 var(--blob-speed, 36s) ease-in-out infinite alternate;
+}
+
+.atmosphere-blob-2 {
+    width: 50vw;
+    height: 50vw;
+    min-width: 360px;
+    min-height: 360px;
+    bottom: -12vw;
+    right: -8vw;
+    background-color: var(--blob-2);
+    animation: atmosphereFloat2 var(--blob-speed, 40s) ease-in-out infinite alternate;
+}
+
+.atmosphere-blob-3 {
+    width: 36vw;
+    height: 36vw;
+    min-width: 280px;
+    min-height: 280px;
+    top: 42vh;
+    left: 42vw;
+    background-color: var(--blob-3);
+    animation: atmosphereFloat3 var(--blob-speed, 34s) ease-in-out infinite alternate;
+}
+
+@keyframes atmosphereFloat1 {
+    0%   { transform: translate3d(0, 0, 0) scale(1); }
+    50%  { transform: translate3d(5vw, 6vh, 0) scale(1.06); }
+    100% { transform: translate3d(-3vw, 10vh, 0) scale(0.96); }
+}
+
+@keyframes atmosphereFloat2 {
+    0%   { transform: translate3d(0, 0, 0) scale(1); }
+    50%  { transform: translate3d(-6vw, -5vh, 0) scale(1.08); }
+    100% { transform: translate3d(4vw, -8vh, 0) scale(0.94); }
+}
+
+@keyframes atmosphereFloat3 {
+    0%   { transform: translate3d(0, 0, 0) scale(0.96); }
+    50%  { transform: translate3d(4vw, -6vh, 0) scale(1.05); }
+    100% { transform: translate3d(-5vw, 5vh, 0) scale(1.02); }
+}
+
+/* ==========================================================================
+   Prefers-Reduced-Motion: No movement, only smooth color transitions
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .atmosphere-blob-1,
+    .atmosphere-blob-2,
+    .atmosphere-blob-3 {
+        animation: none !important;
+    }
+}
+
+/* ==========================================================================
+   Single 40px Discreet Circular Button + 5 Emotion Chips
+   ========================================================================== */
+
+.atmosphere-widget {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 95;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+@media (max-width: 1023px) {
+    .atmosphere-widget {
+        bottom: 84px;
+        right: 16px;
+    }
+}
+
+.atmosphere-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    height: 40px;
+    padding: 0 16px 0 13px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(184, 142, 91, 0.4);
+    color: #161412;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(22, 20, 18, 0.12);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+    user-select: none;
+}
+
+.atmosphere-toggle:hover {
+    background: #FFFFFF;
+    color: #161412;
+    border-color: var(--accent, #7C5930);
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(22, 20, 18, 0.16);
+}
+
+.atmosphere-toggle.is-active {
+    background: #161412;
+    color: #FFFFFF;
+    border-color: #161412;
+}
+
+.atmosphere-toggle.is-active .atmosphere-toggle-icon {
+    color: #E2C7A2;
+}
+
+.atmosphere-toggle.is-active .atmosphere-toggle-arrow {
+    color: #E2C7A2;
+    transform: rotate(180deg);
+}
+
+.atmosphere-toggle-icon {
+    font-size: 13px;
+    color: var(--accent, #7C5930);
+    line-height: 1;
+    display: inline-block;
+}
+
+.atmosphere-toggle-text {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1;
+}
+
+.atmosphere-toggle-arrow {
+    font-size: 10px;
+    color: #7C5930;
+    line-height: 1;
+    transition: transform 0.25s ease;
+}
+
+.atmosphere-chips {
+    position: absolute;
+    bottom: 48px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(184, 142, 91, 0.32);
+    border-radius: 18px;
+    box-shadow: 0 16px 44px -8px rgba(22, 20, 18, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) scale(0.96);
+    pointer-events: none;
+    transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+                visibility 0.25s;
+    white-space: nowrap;
+}
+
+.atmosphere-chips.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.atmosphere-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(184, 142, 91, 0.18);
+}
+
+.atmosphere-panel-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #161412;
+    text-transform: uppercase;
+}
+
+.atmosphere-sparkle-icon {
+    color: var(--accent, #7C5930);
+}
+
+.atmosphere-panel-hint {
+    font-size: 9.5px;
+    color: var(--accent, #7C5930);
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+.atmosphere-chips-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+@media (max-width: 640px) {
+    .atmosphere-chips {
+        position: absolute;
+        bottom: 50px;
+        right: 0;
+        max-width: 290px;
+        white-space: normal;
+        padding: 8px 10px;
+    }
+    .atmosphere-chips-row {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 4px;
+    }
+}
+
+.atmosphere-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #4A423B;
+    background: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    line-height: 1;
+}
+
+.atmosphere-chip:hover {
+    background: rgba(22, 20, 18, 0.06);
+    color: #161412;
+}
+
+.atmosphere-chip.is-active {
+    background: rgba(22, 20, 18, 0.09);
+    color: #161412;
+    border-color: rgba(184, 142, 91, 0.5);
+    font-weight: 700;
+}
+
+.atmosphere-chip-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
