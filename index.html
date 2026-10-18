@@ -366,13 +366,13 @@
     <!-- =====================================================================
          1. TRANSPARENT PSYCHOLOGY SPLASH SCREEN (Pozitif Yaşam & Ayhan Altaş)
          ===================================================================== -->
-    <div id="splash-screen" class="fixed inset-0 z-[100] flex flex-col justify-between p-6 sm:p-12 text-[#0F172A] transition-all duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] overflow-hidden">
+    <div id="splash-screen" class="fixed inset-0 z-[100] flex flex-col justify-between p-6 sm:p-12 text-[#0F172A] transition-all duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] overflow-hidden" style="will-change: transform, opacity;">
         <!-- Transparent Architecture / Serene Therapy Background -->
         <div class="absolute inset-0 -z-20 bg-cover bg-center scale-105 transition-transform duration-[3000ms]"
              style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=2000&q=85');">
         </div>
-        <!-- Luminous Translucent Pozitif Yaşam Veil -->
-        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white/95 via-sky-50/90 to-white/95 backdrop-blur-2xl"></div>
+        <!-- High-Performance Luminous Translucent Pozitif Yaşam Veil (Lightweight, No GPU Stall) -->
+        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white/98 via-sky-50/95 to-white/98 backdrop-blur-sm"></div>
 
         <!-- Splash Top -->
         <div class="flex items-center justify-between text-xs tracking-[0.22em] text-slate-600 uppercase font-semibold relative z-10">
@@ -408,10 +408,10 @@
                 EMDR Terapisi &bull; Klinik Hipnoterapi &bull; Panik & Kaygı Çözümlemeleri
             </p>
 
-            <!-- Smooth Progress Bar -->
+            <!-- Hardware-Accelerated ScaleX Progress Bar (Zero Layout Reflow) -->
             <div class="max-w-xs mx-auto pt-2">
                 <div class="h-2 w-full bg-slate-200/80 rounded-full overflow-hidden p-0.5 border border-slate-200">
-                    <div id="splash-bar" class="h-full bg-gradient-to-r from-[#0284C7] via-[#38BDF8] to-[#76B82A] rounded-full transition-all duration-75" style="width: 0%"></div>
+                    <div id="splash-bar" class="h-full w-full bg-gradient-to-r from-[#0284C7] via-[#38BDF8] to-[#76B82A] rounded-full origin-left transform scale-x-0" style="transform: scaleX(0); will-change: transform;"></div>
                 </div>
             </div>
         </div>
@@ -2987,12 +2987,27 @@
          6. Book Chapter Explorer & Appointment Stepper
          ===================================================================== -->
     <script>
-        // 1. ELEGANT CLINIC SPLASH SCREEN (Smooth ~1.2s Intro & Instant Skip)
-        let splashProgress = 0;
+        // 1. HIGH-PERFORMANCE 60FPS CLINIC SPLASH SCREEN (Silky Smooth rAF, Zero Reflow)
         let splashDismissed = false;
+        let enginesInitialized = false;
         const splashCounter = document.getElementById('splash-counter');
         const splashBar = document.getElementById('splash-bar');
         const splashScreen = document.getElementById('splash-screen');
+
+        function startDeferredEngines() {
+            if (enginesInitialized) return;
+            enginesInitialized = true;
+            // Launch hero 3D gently as splash departs
+            requestAnimationFrame(() => {
+                initThreeHero();
+                renderGroundingStep();
+            });
+            // Stagger lower interactive canvas modules so initial viewport is 100% smooth
+            setTimeout(() => {
+                initNeuro3DLab();
+                initThoughtStreamCanvas();
+            }, 250);
+        }
 
         function dismissSplash() {
             if (!splashScreen || splashDismissed) return;
@@ -3003,6 +3018,7 @@
             setTimeout(() => {
                 splashScreen.style.display = 'none';
             }, 750);
+            startDeferredEngines();
         }
 
         if (splashScreen) {
@@ -3010,29 +3026,36 @@
                 if (e.key === 'Escape' || e.key === ' ') dismissSplash(); 
             });
 
-            const durationMs = 1200;
-            const intervalMs = 25;
-            const totalSteps = durationMs / intervalMs;
-            const increment = 100 / totalSteps;
+            const startTime = performance.now();
+            const totalDuration = 1050; // Snappy, luxurious 1s progress
 
-            const splashInterval = setInterval(() => {
-                if (splashDismissed) {
-                    clearInterval(splashInterval);
-                    return;
+            function stepSplash(now) {
+                if (splashDismissed) return;
+                const elapsed = now - startTime;
+                const linear = Math.min(1, elapsed / totalDuration);
+                // Ease out cubic: starts briskly and glides to finish
+                const progress = 1 - Math.pow(1 - linear, 2.4);
+                const pct = Math.min(100, Math.floor(progress * 100));
+
+                if (splashCounter) {
+                    splashCounter.innerText = (pct < 10 ? '0' : '') + pct + '%';
                 }
-                splashProgress += increment + (Math.random() * 0.8 - 0.4);
-                if (splashProgress >= 100) {
-                    splashProgress = 100;
-                    clearInterval(splashInterval);
-                    if (splashCounter) splashCounter.innerText = '100%';
-                    if (splashBar) splashBar.style.width = '100%';
-                    setTimeout(dismissSplash, 220);
+                if (splashBar) {
+                    splashBar.style.transform = `scaleX(${progress})`;
+                }
+
+                if (linear < 1) {
+                    requestAnimationFrame(stepSplash);
                 } else {
-                    const rounded = Math.floor(splashProgress);
-                    if (splashCounter) splashCounter.innerText = (rounded < 10 ? '0' : '') + rounded + '%';
-                    if (splashBar) splashBar.style.width = rounded + '%';
+                    if (splashCounter) splashCounter.innerText = '100%';
+                    if (splashBar) splashBar.style.transform = 'scaleX(1)';
+                    setTimeout(dismissSplash, 160);
                 }
-            }, intervalMs);
+            }
+
+            requestAnimationFrame(stepSplash);
+        } else {
+            startDeferredEngines();
         }
 
         // 2. HERO THREE.JS 3D MESH (SLOWED DOWN & MEDITATIVE)
@@ -4264,12 +4287,15 @@
             showBookChapter(next, nextBtn);
         }
 
-        // INIT ON DOM LOAD
+        // INIT ON DOM LOAD (Deferred Heavy WebGL/Canvas to preserve silky 60fps splash)
         window.addEventListener('DOMContentLoaded', () => {
-            initThreeHero();
-            initNeuro3DLab();
-            initThoughtStreamCanvas();
             renderGroundingStep();
+            // Fallback safety: ensure 3D engines start even if splash screen was closed early or unavailable
+            setTimeout(() => {
+                if (!enginesInitialized) {
+                    startDeferredEngines();
+                }
+            }, 1400);
         });
 
         // 7. SMOOTH HARDWARE-ACCELERATED CARD PHYSICS (Throttled & Non-blocking)
