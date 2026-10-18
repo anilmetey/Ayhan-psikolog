@@ -364,64 +364,65 @@
     <div class="ambient-noise"></div>
 
     <!-- =====================================================================
-         1. TRANSPARENT PSYCHOLOGY SPLASH SCREEN (Luminous & Portrait Logo)
+         1. TRANSPARENT PSYCHOLOGY SPLASH SCREEN (Pozitif Yaşam & Ayhan Altaş)
          ===================================================================== -->
-    <div id="splash-screen" class="fixed inset-0 z-[100] flex flex-col justify-between p-6 sm:p-12 text-ink-950 transition-all duration-1000 ease-[cubic-bezier(0.85,0,0.15,1)] overflow-hidden">
-        <!-- Transparent Psychology / Serene Therapy Architecture Background Image -->
-        <div class="absolute inset-0 -z-20 bg-cover bg-center scale-105 transition-transform duration-[2500ms]"
+    <div id="splash-screen" class="fixed inset-0 z-[100] flex flex-col justify-between p-6 sm:p-12 text-[#0F172A] transition-all duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] overflow-hidden">
+        <!-- Transparent Architecture / Serene Therapy Background -->
+        <div class="absolute inset-0 -z-20 bg-cover bg-center scale-105 transition-transform duration-[3000ms]"
              style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=2000&q=85');">
         </div>
-        <!-- Luminous Warm Translucent Veil -->
-        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#FBF8F3]/92 via-[#FBF8F3]/88 to-[#F4EFE6]/95 backdrop-blur-xl"></div>
+        <!-- Luminous Translucent Pozitif Yaşam Veil -->
+        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white/95 via-sky-50/90 to-white/95 backdrop-blur-2xl"></div>
 
         <!-- Splash Top -->
-        <div class="flex items-center justify-between text-xs tracking-[0.22em] text-ink-700 uppercase font-semibold relative z-10">
+        <div class="flex items-center justify-between text-xs tracking-[0.22em] text-slate-600 uppercase font-semibold relative z-10">
             <span class="flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-[#B88E5B]"></span>
-                <span>POZİTİF YAŞAM PSİKOLOJİK DANIŞMANLIK</span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#0284C7] animate-pulse"></span>
+                <span class="text-[#0F172A] font-bold">POZİTİF YAŞAM DANIŞMANLIK</span>
             </span>
-            <span class="text-[#9A7243] font-bold">BURSA &bull; NİLÜFER</span>
+            <span class="text-[#0284C7] font-bold">BURSA &bull; NİLÜFER</span>
         </div>
 
         <!-- Splash Center -->
         <div class="max-w-4xl mx-auto w-full text-center space-y-6 relative z-10 my-auto">
             <!-- Ayhan Altaş Portrait Crest in Splash -->
             <div class="relative inline-flex items-center justify-center w-28 h-28 mx-auto mb-2">
-                <div class="absolute inset-0 rounded-full border-2 border-[#B88E5B]/45 animate-[spin_14s_linear_infinite]"></div>
-                <div class="absolute inset-2 rounded-full border border-dashed border-[#9A7243]/40 animate-[spin_20s_linear_infinite_reverse]"></div>
+                <div class="absolute inset-0 rounded-full border-2 border-[#0284C7]/40 animate-[spin_14s_linear_infinite]"></div>
+                <div class="absolute inset-2 rounded-full border border-dashed border-[#76B82A]/50 animate-[spin_20s_linear_infinite_reverse]"></div>
                 <img src="https://s3-eu-west-1.amazonaws.com/doktortakvimi.com/doctor/21d194/21d1946f02a6bbcc2bd51e9619519c06_large.jpg"
                      alt="Uzm. Klinik Psk. Ayhan Altaş"
                      class="w-20 h-20 rounded-full object-cover object-top shadow-xl border-2 border-white">
+                <span class="absolute bottom-1 right-1 w-6 h-6 bg-[#76B82A] text-white rounded-full flex items-center justify-center text-xs font-bold shadow-md" title="Onaylı Uzman">✓</span>
             </div>
 
-            <div class="inline-block px-4 py-1.5 rounded-full bg-white/90 border border-[#D5C0A3] text-[11px] font-bold tracking-[0.2em] uppercase text-[#7C5930] shadow-sm">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-white/95 border border-[#BAE6FD] text-[11px] font-bold tracking-[0.2em] uppercase text-[#0284C7] shadow-sm">
                 Uzm. Klinik Psikolog Ayhan Altaş
             </div>
 
-            <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-bold text-[#161412] tracking-tight leading-[1.08]">
+            <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-bold text-[#0F172A] tracking-tight leading-[1.08]">
                 Zihinsel Denge, <br>
-                <span class="text-[#7C5930] font-semibold">Bilimsel Rehberlik.</span>
+                <span class="bg-gradient-to-r from-[#0284C7] via-[#0284C7] to-[#16A34A] bg-clip-text text-transparent">Bilimsel Rehberlik.</span>
             </h1>
 
-            <p class="text-xs sm:text-sm text-[#4A423B] tracking-[0.18em] uppercase max-w-lg mx-auto font-semibold">
+            <p class="text-xs sm:text-sm text-slate-600 tracking-[0.18em] uppercase max-w-lg mx-auto font-semibold">
                 EMDR Terapisi &bull; Klinik Hipnoterapi &bull; Panik & Kaygı Çözümlemeleri
             </p>
 
             <!-- Smooth Progress Bar -->
             <div class="max-w-xs mx-auto pt-2">
-                <div class="h-1.5 w-full bg-[#161412]/10 rounded-full overflow-hidden">
-                    <div id="splash-bar" class="h-full bg-gradient-to-r from-[#B88E5B] to-[#7C5930] rounded-full transition-all duration-150" style="width: 0%"></div>
+                <div class="h-2 w-full bg-slate-200/80 rounded-full overflow-hidden p-0.5 border border-slate-200">
+                    <div id="splash-bar" class="h-full bg-gradient-to-r from-[#0284C7] via-[#38BDF8] to-[#76B82A] rounded-full transition-all duration-75" style="width: 0%"></div>
                 </div>
             </div>
         </div>
 
         <!-- Splash Bottom Counter & Skip -->
-        <div class="flex items-end justify-between border-t border-[#161412]/10 pt-5 relative z-10">
+        <div class="flex items-end justify-between border-t border-slate-200/80 pt-5 relative z-10">
             <div class="flex items-baseline gap-3">
-                <div class="font-display text-3xl sm:text-4xl font-bold text-[#161412] tracking-tighter" id="splash-counter">00%</div>
-                <div class="text-[11px] tracking-widest uppercase text-[#4A423B] font-semibold">Güvenli Alan Hazırlanıyor</div>
+                <div class="font-display text-3xl sm:text-4xl font-bold text-[#0F172A] tracking-tighter" id="splash-counter">00%</div>
+                <div class="text-[11px] tracking-widest uppercase text-slate-500 font-semibold">Güvenli Alan Hazırlanıyor</div>
             </div>
-            <button onclick="dismissSplash()" class="btn-solid-dark px-5 py-2.5 rounded-full text-xs tracking-wider uppercase font-semibold flex items-center gap-2 shadow-md">
+            <button onclick="dismissSplash()" class="btn-shimmer px-5 py-2.5 rounded-full text-xs tracking-wider uppercase font-semibold flex items-center gap-2 bg-[#0284C7] hover:bg-[#0369A1] text-white shadow-md transition">
                 <span>Doğrudan Başla</span>
                 <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
@@ -3242,45 +3243,52 @@
          6. Book Chapter Explorer & Appointment Stepper
          ===================================================================== -->
     <script>
-        // 1. FAST SPLASH SCREEN COUNTER & INSTANT DISMISS
+        // 1. ELEGANT CLINIC SPLASH SCREEN (Smooth ~1.2s Intro & Instant Skip)
         let splashProgress = 0;
+        let splashDismissed = false;
         const splashCounter = document.getElementById('splash-counter');
         const splashBar = document.getElementById('splash-bar');
         const splashScreen = document.getElementById('splash-screen');
 
         function dismissSplash() {
-            if (!splashScreen) return;
-            try { sessionStorage.setItem('ayhan_splash_done', '1'); } catch (e) {}
+            if (!splashScreen || splashDismissed) return;
+            splashDismissed = true;
             splashScreen.style.pointerEvents = 'none';
             splashScreen.style.opacity = '0';
             splashScreen.style.transform = 'translateY(-100%)';
             setTimeout(() => {
                 splashScreen.style.display = 'none';
-            }, 400);
+            }, 750);
         }
 
         if (splashScreen) {
-            // Click anywhere to dismiss immediately
-            splashScreen.addEventListener('click', dismissSplash);
-            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') dismissSplash(); });
+            document.addEventListener('keydown', (e) => { 
+                if (e.key === 'Escape' || e.key === ' ') dismissSplash(); 
+            });
 
-            if (sessionStorage.getItem('ayhan_splash_done') === '1') {
-                dismissSplash();
-            } else {
-                const splashInterval = setInterval(() => {
-                    splashProgress += Math.floor(Math.random() * 25) + 30;
-                    if (splashProgress >= 100) {
-                        splashProgress = 100;
-                        clearInterval(splashInterval);
-                        if (splashCounter) splashCounter.innerText = '100%';
-                        if (splashBar) splashBar.style.width = '100%';
-                        setTimeout(dismissSplash, 120);
-                    } else {
-                        if (splashCounter) splashCounter.innerText = (splashProgress < 10 ? '0' : '') + splashProgress + '%';
-                        if (splashBar) splashBar.style.width = splashProgress + '%';
-                    }
-                }, 25);
-            }
+            const durationMs = 1200;
+            const intervalMs = 25;
+            const totalSteps = durationMs / intervalMs;
+            const increment = 100 / totalSteps;
+
+            const splashInterval = setInterval(() => {
+                if (splashDismissed) {
+                    clearInterval(splashInterval);
+                    return;
+                }
+                splashProgress += increment + (Math.random() * 0.8 - 0.4);
+                if (splashProgress >= 100) {
+                    splashProgress = 100;
+                    clearInterval(splashInterval);
+                    if (splashCounter) splashCounter.innerText = '100%';
+                    if (splashBar) splashBar.style.width = '100%';
+                    setTimeout(dismissSplash, 220);
+                } else {
+                    const rounded = Math.floor(splashProgress);
+                    if (splashCounter) splashCounter.innerText = (rounded < 10 ? '0' : '') + rounded + '%';
+                    if (splashBar) splashBar.style.width = rounded + '%';
+                }
+            }, intervalMs);
         }
 
         // 2. HERO THREE.JS 3D MESH (SLOWED DOWN & MEDITATIVE)
