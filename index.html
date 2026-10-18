@@ -606,8 +606,8 @@
 
         <div class="space-y-3 pt-4 border-t border-[#161412]/10">
             <a href="#randevu-al" onclick="toggleMobileNav()" class="btn-solid-dark w-full py-3.5 px-4 rounded-2xl font-bold text-center text-xs sm:text-sm shadow-lg flex items-center justify-center gap-2.5">
-                <svg class="w-4 h-4 text-[#CEAA7C]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                <span>Online Randevu Takvimini Aç</span>
+                <svg class="w-4 h-4 text-[#76B82A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span>Randevu Talebi Oluştur</span>
                 <svg class="w-4 h-4 text-white/80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
             <div class="grid grid-cols-2 gap-3 text-xs">
@@ -768,7 +768,7 @@
                             <!-- Clean Editorial Action Buttons -->
                             <div class="grid grid-cols-2 gap-3 pt-1">
                                 <a href="#randevu-al" class="btn-solid-dark py-3 px-4 rounded-xl font-semibold text-xs text-center shadow-sm flex items-center justify-center gap-1.5 hover:scale-[1.02] transition-transform">
-                                    <span>Randevu Takvimi</span>
+                                    <span>Randevu Talebi</span>
                                     <span>&rarr;</span>
                                 </a>
                                 <a href="#uzmanlik" class="btn-solid-cream py-3 px-4 rounded-xl font-semibold text-xs text-center border border-[#D5C0A3] hover:border-[#9A7243] transition">
@@ -2527,7 +2527,7 @@
     <!-- =====================================================================
          9. ONLINE APPOINTMENT ENGINE (Transparent Psychology Visual Background)
          ===================================================================== -->
-    <section id="randevu-al" class="py-24 md:py-32 relative overflow-hidden">
+    <section id="randevu-al" class="py-20 md:py-28 relative overflow-hidden">
         
         <!-- Transparent Psychology / Therapy Room Background Image -->
         <div class="absolute inset-0 -z-20 bg-cover bg-center bg-fixed"
@@ -2536,335 +2536,151 @@
         <!-- Luminous Clean Translucent Overlay -->
         <div class="absolute inset-0 -z-10 bg-gradient-to-b from-white/95 via-sky-50/90 to-white/95 backdrop-blur-md"></div>
 
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
-            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3 reveal-item">
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-3 reveal-item">
                 <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border-2 border-[#BAE6FD] text-[#0284C7] text-xs font-bold tracking-wide shadow-sm">
                     <svg class="w-4 h-4 text-[#0284C7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                    <span>Çevrim İçi Randevu Talebi Sistemi</span>
+                    <span>Ön Değerlendirme & Randevu Talebi</span>
                 </span>
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] tracking-tight">
-                    Seansınızı Planlayın
+                    Randevu Talebi Oluşturun
                 </h2>
                 <p class="text-base sm:text-lg text-[#0F172A] font-bold leading-relaxed max-w-xl mx-auto">
-                    Danışmanlık alanını, görüşme türünü ve size en uygun saat dilimini seçin. Talebinizi anında iletelim.
+                    Danışmanlık konusunu ve görüşme türünü seçerek iletişim bilgilerinizi bırakın. Kurumumuz talebinizi değerlendirip size en kısa sürede dönüş yapacaktır.
                 </p>
             </div>
 
-            <!-- Booking Stepper Card -->
+            <!-- Single-Screen Fixed-Structure Request Card (Zero Layout Jump) -->
             <div class="luxury-frame shadow-2xl">
-                <div class="bg-white/95 rounded-[calc(2rem-4px)] p-6 sm:p-10 space-y-8 border border-[#BAE6FD] shadow-xl">
+                <div class="bg-white/95 rounded-[calc(2rem-4px)] p-6 sm:p-9 border border-[#BAE6FD] shadow-xl">
                     
-                    <!-- Progress Stepper -->
-                    <div class="flex items-center justify-between pb-6 border-b border-slate-200 max-w-2xl mx-auto">
-                        <div class="flex items-center gap-2" id="step-ind-1">
-                            <span class="w-8 h-8 rounded-full bg-[#0284C7] text-white flex items-center justify-center font-bold text-xs shadow-md">1</span>
-                            <span class="text-xs font-bold uppercase tracking-wider text-[#0284C7] hidden sm:inline">Hizmet</span>
+                    <!-- Specialist Header Strip -->
+                    <div class="pb-5 mb-6 border-b border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="flex items-center gap-3.5">
+                            <div class="relative flex-shrink-0">
+                                <img src="https://s3-eu-west-1.amazonaws.com/doktortakvimi.com/doctor/21d194/21d1946f02a6bbcc2bd51e9619519c06_large.jpg" 
+                                     alt="Uzm. Psk. Ayhan Altaş"
+                                     class="w-14 h-14 rounded-full object-cover object-top border-2 border-[#0284C7] shadow-sm">
+                                <span class="absolute -bottom-0.5 -right-0.5 w-5 h-5 bg-[#76B82A] text-white rounded-full flex items-center justify-center text-[10px] font-bold shadow">✓</span>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="font-serif text-base sm:text-lg font-bold text-[#0F172A]">Uzm. Psk. Ayhan Altaş</span>
+                                    <span class="text-[10px] font-bold text-[#0284C7] bg-[#E0F2FE] px-2.5 py-0.5 rounded-full uppercase tracking-wider border border-[#BAE6FD]">Pozitif Yaşam Danışmanlık</span>
+                                </div>
+                                <p class="text-xs text-slate-600 font-medium mt-0.5">
+                                    Klinik Psikolog &bull; Psikoterapist &bull; EMDR & Hipnoterapi Uzmanı
+                                </p>
+                            </div>
                         </div>
-                        <div class="h-0.5 flex-1 mx-3 bg-slate-200" id="step-bar-1"></div>
-
-                        <div class="flex items-center gap-2" id="step-ind-2">
-                            <span class="w-8 h-8 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center font-bold text-xs">2</span>
-                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400 hidden sm:inline">Uzman & Ekol</span>
-                        </div>
-                        <div class="h-0.5 flex-1 mx-3 bg-slate-200" id="step-bar-2"></div>
-
-                        <div class="flex items-center gap-2" id="step-ind-3">
-                            <span class="w-8 h-8 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center font-bold text-xs">3</span>
-                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400 hidden sm:inline">Görüşme Türü</span>
-                        </div>
-                        <div class="h-0.5 flex-1 mx-3 bg-slate-200" id="step-bar-3"></div>
-
-                        <div class="flex items-center gap-2" id="step-ind-4">
-                            <span class="w-8 h-8 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center font-bold text-xs">4</span>
-                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400 hidden sm:inline">Zaman & İletişim</span>
+                        <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D] text-xs font-bold">
+                            <span class="w-2 h-2 rounded-full bg-[#76B82A] animate-pulse"></span>
+                            <span>Bursa Nilüfer & Online Seans</span>
                         </div>
                     </div>
 
-                    <!-- Steps Container with Stable Height (Eliminates Layout Shifts/Jumps) -->
-                    <div class="min-h-[460px] flex flex-col justify-between" id="booking-steps-container">
+                    <!-- Fixed Min-Height Container so Form & Confirmation Never Shift Page Height -->
+                    <div class="min-h-[380px] flex flex-col justify-between" id="booking-steps-container">
 
-                        <!-- STEP 1: Service Selection -->
-                        <div id="booking-step-1" class="flex-1 flex flex-col justify-between space-y-6">
-                            <div class="space-y-6">
-                                <h3 class="text-xl sm:text-2xl font-bold text-center text-[#0F172A] tracking-tight">
-                                    Hangi alanda danışmanlık almak istiyorsunuz?
-                                </h3>
-                                <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3.5">
-                                    <label class="p-4 rounded-2xl border-2 border-[#0284C7] hover:border-[#0284C7] bg-white cursor-pointer transition flex items-center gap-3 shadow-sm">
-                                        <input type="radio" name="selected_service" value="EMDR Terapisi" checked class="accent-[#0284C7] w-4 h-4">
-                                        <div>
-                                            <div class="font-bold text-sm text-[#0F172A]">EMDR Terapisi</div>
-                                            <div class="text-[11px] text-slate-500">Travma, panik, duyarsızlaştırma</div>
-                                        </div>
-                                    </label>
-                                    <label class="p-4 rounded-2xl border border-slate-200 hover:border-[#0284C7] bg-white cursor-pointer transition flex items-center gap-3 shadow-sm">
-                                        <input type="radio" name="selected_service" value="Panik Atak & Kaygı Terapisi" class="accent-[#0284C7] w-4 h-4">
-                                        <div>
-                                            <div class="font-bold text-sm text-[#0F172A]">Bireysel Terapi</div>
-                                            <div class="text-[11px] text-slate-500">Kaygı, panik atak, duygu durum</div>
-                                        </div>
-                                    </label>
-                                    <label class="p-4 rounded-2xl border border-slate-200 hover:border-[#0284C7] bg-white cursor-pointer transition flex items-center gap-3 shadow-sm">
-                                        <input type="radio" name="selected_service" value="Klinik Hipnoterapi" class="accent-[#0284C7] w-4 h-4">
-                                        <div>
-                                            <div class="font-bold text-sm text-[#0F172A]">Klinik Hipnoterapi</div>
-                                            <div class="text-[11px] text-slate-500">Fobi, bilinçdışı odak, stres</div>
-                                        </div>
-                                    </label>
-                                    <label class="p-4 rounded-2xl border border-slate-200 hover:border-[#0284C7] bg-white cursor-pointer transition flex items-center gap-3 shadow-sm">
-                                        <input type="radio" name="selected_service" value="Çift & Aile Danışmanlığı" class="accent-[#0284C7] w-4 h-4">
-                                        <div>
-                                            <div class="font-bold text-sm text-[#0F172A]">Çift & Aile Danışmanlığı</div>
-                                            <div class="text-[11px] text-slate-500">İlişki ve evlilik dinamikleri</div>
-                                        </div>
-                                    </label>
-                                    <label class="p-4 rounded-2xl border border-slate-200 hover:border-[#0284C7] bg-white cursor-pointer transition flex items-center gap-3 shadow-sm">
-                                        <input type="radio" name="selected_service" value="OKB & Takıntı Terapisi" class="accent-[#0284C7] w-4 h-4">
-                                        <div>
-                                            <div class="font-bold text-sm text-[#0F172A]">OKB & Takıntılar</div>
-                                            <div class="text-[11px] text-slate-500">Obsesyon, kontrol, BDT & EMDR</div>
-                                        </div>
-                                    </label>
-                                    <label class="p-4 rounded-2xl border border-slate-200 hover:border-[#0284C7] bg-white cursor-pointer transition flex items-center gap-3 shadow-sm">
-                                        <input type="radio" name="selected_service" value="Online Danışmanlık" class="accent-[#0284C7] w-4 h-4">
-                                        <div>
-                                            <div class="font-bold text-sm text-[#0F172A]">Online Danışmanlık</div>
-                                            <div class="text-[11px] text-slate-500">Canlı görüntülü seans</div>
-                                        </div>
-                                    </label>
-                                    <label class="p-4 rounded-2xl border border-slate-200 hover:border-[#0284C7] bg-white cursor-pointer transition flex items-center gap-3 shadow-sm">
-                                        <input type="radio" name="selected_service" value="Ergen & Sınav Kaygısı" class="accent-[#0284C7] w-4 h-4">
-                                        <div>
-                                            <div class="font-bold text-sm text-[#0F172A]">Ergen & Sınav Kaygısı</div>
-                                            <div class="text-[11px] text-slate-500">12–18 yaş, LGS/YKS, uyum</div>
-                                        </div>
-                                    </label>
-                                    <label class="p-4 rounded-2xl border border-slate-200 hover:border-[#0284C7] bg-white cursor-pointer transition flex items-center gap-3 shadow-sm">
-                                        <input type="radio" name="selected_service" value="Eğitim & Kurumsal Seminer" class="accent-[#0284C7] w-4 h-4">
-                                        <div>
-                                            <div class="font-bold text-sm text-[#0F172A]">Eğitim & Seminer</div>
-                                            <div class="text-[11px] text-slate-500">Analitik hipnoz & seminerler</div>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="flex justify-end pt-4 border-t border-slate-100">
-                                <button type="button" onclick="goToStep(2)" class="btn-shimmer px-7 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider flex items-center gap-2 bg-[#0284C7] hover:bg-[#0369A1] text-white shadow-md transition">
-                                    <span>Sonraki Adım: Uzman & Terapi Ekolü</span>
-                                    <svg class="w-4 h-4 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- STEP 2: Specialist & Protocol Selection (Single Specialist Card + Protocol Selection) -->
-                        <div id="booking-step-2" class="flex-1 flex flex-col justify-between space-y-6 hidden">
-                            <div class="space-y-5">
-                                <div class="text-center space-y-1">
-                                    <h3 class="text-xl sm:text-2xl font-bold text-[#0F172A] tracking-tight">
-                                        Uzman Psikolog & Terapi Yaklaşımı
-                                    </h3>
-                                    <p class="text-xs text-slate-500">Seansınız bizzat kurucumuz Uzm. Psk. Ayhan Altaş tarafından yürütülecektir.</p>
-                                </div>
-
-                                <!-- Single Authoritative Doctor Profile Card -->
-                                <div class="p-5 rounded-2xl bg-gradient-to-r from-sky-50 via-white to-sky-50/60 border-2 border-[#0284C7] shadow-sm flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-                                    <div class="relative flex-shrink-0">
-                                        <img src="https://s3-eu-west-1.amazonaws.com/doktortakvimi.com/doctor/21d194/21d1946f02a6bbcc2bd51e9619519c06_large.jpg" 
-                                             alt="Uzm. Psk. Ayhan Altaş"
-                                             class="w-20 h-20 rounded-full object-cover object-top border-2 border-[#0284C7] shadow-md">
-                                        <span class="absolute bottom-0 right-0 w-6 h-6 bg-[#76B82A] text-white rounded-full flex items-center justify-center text-xs font-bold shadow" title="Onaylı Uzman">✓</span>
-                                    </div>
-                                    <div class="flex-1 space-y-1">
-                                        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-                                            <span class="font-serif text-lg font-bold text-[#0F172A]">Uzm. Psk. Ayhan Altaş</span>
-                                            <span class="text-[10px] font-bold text-[#0284C7] bg-[#E0F2FE] px-2.5 py-0.5 rounded-full uppercase tracking-wider">Pozitif Yaşam Danışmanlık</span>
-                                        </div>
-                                        <p class="text-xs text-slate-600 font-medium">
-                                            Klinik Psikolog &bull; Psikoterapist &bull; EMDR Terapisti &bull; Hipnoterapist
-                                        </p>
-                                        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3 text-[11px] text-slate-500 pt-0.5">
-                                            <span class="flex items-center gap-1">📍 Bursa Nilüfer &bull; Online Canlı Görüşme</span>
-                                            <span class="flex items-center gap-1 text-[#76B82A] font-semibold">★ 15+ Yıl Klinik Deneyim</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Protocol / Approach Selection -->
-                                <div class="space-y-2.5">
-                                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700">Tercih Ettiğiniz Terapi Ekolü / Protokol:</label>
-                                    <div class="grid sm:grid-cols-2 gap-3">
-                                        <label class="p-3.5 rounded-xl border-2 border-[#0284C7] bg-white cursor-pointer transition flex items-center gap-3 shadow-sm hover:border-[#0284C7]">
-                                            <input type="radio" name="selected_doctor" value="Uzm. Psk. Ayhan Altaş (EMDR Terapisi)" checked class="accent-[#0284C7] w-4 h-4">
-                                            <div class="text-left">
-                                                <div class="font-bold text-xs text-[#0F172A]">EMDR Terapisi Protokolü</div>
-                                                <div class="text-[11px] text-slate-500">Çift yönlü uyarım, travma ve panik odaklı</div>
-                                            </div>
+                        <!-- MAIN SINGLE-SCREEN FORM -->
+                        <div id="booking-form-view" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                
+                                <!-- LEFT COLUMN: Consultation Topic & Modality -->
+                                <div class="space-y-5">
+                                    <div>
+                                        <label for="booking-service" class="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-2">
+                                            1. Danışmanlık Konusu
                                         </label>
-                                        <label class="p-3.5 rounded-xl border border-slate-200 hover:border-[#0284C7] bg-white cursor-pointer transition flex items-center gap-3 shadow-sm">
-                                            <input type="radio" name="selected_doctor" value="Uzm. Psk. Ayhan Altaş (Bilişsel Davranışçı Terapi - BDT)" class="accent-[#0284C7] w-4 h-4">
-                                            <div class="text-left">
-                                                <div class="font-bold text-xs text-[#0F172A]">Bilişsel Davranışçı Terapi (BDT)</div>
-                                                <div class="text-[11px] text-slate-500">Düşünce-duygu kalıpları, kaygı ve depresyon</div>
-                                            </div>
-                                        </label>
-                                        <label class="p-3.5 rounded-xl border border-slate-200 hover:border-[#0284C7] bg-white cursor-pointer transition flex items-center gap-3 shadow-sm">
-                                            <input type="radio" name="selected_doctor" value="Uzm. Psk. Ayhan Altaş (Klinik Hipnoterapi)" class="accent-[#0284C7] w-4 h-4">
-                                            <div class="text-left">
-                                                <div class="font-bold text-xs text-[#0F172A]">Klinik Hipnoterapi</div>
-                                                <div class="text-[11px] text-slate-500">Bilinçdışı odaklanma, fobi, derin rahatlama</div>
-                                            </div>
-                                        </label>
-                                        <label class="p-3.5 rounded-xl border border-slate-200 hover:border-[#0284C7] bg-white cursor-pointer transition flex items-center gap-3 shadow-sm">
-                                            <input type="radio" name="selected_doctor" value="Uzm. Psk. Ayhan Altaş (İlk Değerlendirme & Klinik Görüşme)" class="accent-[#0284C7] w-4 h-4">
-                                            <div class="text-left">
-                                                <div class="font-bold text-xs text-[#0F172A]">İlk Değerlendirme & Klinik Görüşme</div>
-                                                <div class="text-[11px] text-slate-500">Yöntemi ilk seansta Ayhan Bey'in belirlemesi için</div>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex justify-between pt-4 border-t border-slate-100">
-                                <button type="button" onclick="goToStep(1)" class="px-5 py-2.5 rounded-full text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
-                                    Geri
-                                </button>
-                                <button type="button" onclick="goToStep(3)" class="btn-shimmer px-7 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider flex items-center gap-2 bg-[#0284C7] hover:bg-[#0369A1] text-white shadow-md transition">
-                                    <span>Sonraki Adım: Görüşme Türü</span>
-                                    <svg class="w-4 h-4 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- STEP 3: Modality -->
-                        <div id="booking-step-3" class="flex-1 flex flex-col justify-between space-y-6 hidden">
-                            <div class="space-y-6">
-                                <h3 class="text-xl sm:text-2xl font-bold text-center text-[#0F172A] tracking-tight">
-                                    Görüşmeyi nerede gerçekleştirmek istersiniz?
-                                </h3>
-                                <div class="grid sm:grid-cols-2 gap-4 max-w-lg mx-auto">
-                                    <label class="p-6 rounded-2xl border-2 border-[#0284C7] bg-white cursor-pointer transition flex flex-col items-center text-center gap-3 shadow-sm">
-                                        <input type="radio" name="selected_modality" value="Yüz Yüze (Bursa Nilüfer Kliniğimizde)" checked class="accent-[#0284C7] w-4 h-4">
-                                        <div class="w-12 h-12 rounded-full bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center text-xl">
-                                            <svg class="w-6 h-6 text-[#0284C7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>
-                                        </div>
-                                        <div>
-                                            <div class="font-bold text-base text-[#0F172A]">Yüz Yüze Görüşme</div>
-                                            <div class="text-xs text-slate-500 mt-1">Bursa Nilüfer (Konak / Beşevler) kliniğimizde</div>
-                                        </div>
-                                    </label>
-
-                                    <label class="p-6 rounded-2xl border border-slate-200 hover:border-[#0284C7] bg-white cursor-pointer transition flex flex-col items-center text-center gap-3 shadow-sm">
-                                        <input type="radio" name="selected_modality" value="Online Terapi (Görüntülü Görüşme)" class="accent-[#0284C7] w-4 h-4">
-                                        <div class="w-12 h-12 rounded-full bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center text-xl">
-                                            <svg class="w-6 h-6 text-[#0284C7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
-                                        </div>
-                                        <div>
-                                            <div class="font-bold text-base text-[#0F172A]">Online Canlı Terapi</div>
-                                            <div class="text-xs text-slate-500 mt-1">Evinizin konforunda güvenli görüntülü seans</div>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="flex justify-between pt-4 border-t border-slate-100">
-                                <button type="button" onclick="goToStep(2)" class="px-5 py-2.5 rounded-full text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
-                                    Geri
-                                </button>
-                                <button type="button" onclick="goToStep(4)" class="btn-shimmer px-7 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider flex items-center gap-2 bg-[#0284C7] hover:bg-[#0369A1] text-white shadow-md transition">
-                                    <span>Sonraki Adım: Tarih & Saat</span>
-                                    <svg class="w-4 h-4 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- STEP 4: Date, Time & Contact -->
-                        <div id="booking-step-4" class="flex-1 flex flex-col justify-between space-y-6 hidden">
-                            <div class="space-y-6">
-                                <h3 class="text-xl sm:text-2xl font-bold text-center text-[#0F172A] tracking-tight">
-                                    Tarih ve İletişim Bilgileriniz
-                                </h3>
-
-                                <!-- Selection Summary -->
-                                <div class="p-4 rounded-2xl bg-[#E0F2FE]/50 border border-[#BAE6FD] text-xs text-slate-700 flex flex-wrap items-center justify-between gap-2 shadow-sm">
-                                    <span id="summary-text" class="font-medium text-[#0F172A]">Seçimleriniz yükleniyor...</span>
-                                    <span class="text-[#0284C7] font-bold text-[10px] uppercase tracking-wider bg-white px-2.5 py-1 rounded-full border border-[#BAE6FD]">Ön Talep</span>
-                                </div>
-
-                                <div class="grid md:grid-cols-2 gap-6">
-                                    <!-- Date & Time -->
-                                    <div class="space-y-4">
-                                        <div>
-                                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Tercih Ettiğiniz Gün</label>
-                                            <select id="booking-date" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white text-[#0F172A] text-sm font-medium focus:outline-none focus:border-[#0284C7]">
-                                                <option value="Bugün (Aynı Gün Kontenjanı)">Bugün (Aynı Gün Randevu İmkânı)</option>
-                                                <option value="Yarın">Yarın</option>
-                                                <option value="2 Gün Sonra">2 Gün Sonra</option>
-                                                <option value="Bu Hafta İçi Uygun Bir Gün">Bu Hafta İçi Uygun Bir Gün</option>
-                                                <option value="Cumartesi Günü">Cumartesi Günü</option>
+                                        <div class="relative">
+                                            <select id="booking-service" onchange="bookingState.service = this.value" class="w-full px-4 py-3.5 rounded-xl border-2 border-[#BAE6FD] hover:border-[#0284C7] bg-[#F8FAFC] focus:bg-white text-[#0F172A] text-sm font-bold focus:outline-none focus:border-[#0284C7] transition shadow-xs cursor-pointer">
+                                                <option value="EMDR Terapisi">EMDR Terapisi (Travma, Panik & Duyarsızlaştırma)</option>
+                                                <option value="Panik Atak & Kaygı Terapisi">Panik Atak ve Kaygı Terapisi (EMDR & BDT)</option>
+                                                <option value="Klinik Hipnoterapi">Klinik Hipnoterapi (Fobi, Bilinçdışı Odak & Stres)</option>
+                                                <option value="Çift & Aile Danışmanlığı">Çift ve Aile Danışmanlığı (İlişki & Evlilik)</option>
+                                                <option value="OKB & Takıntı Terapisi">OKB ve Takıntı Terapisi (Obsesyon & Kompulsiyon)</option>
+                                                <option value="Online Danışmanlık">Online Psikoterapi (Canlı Görüntülü Seans)</option>
+                                                <option value="Ergen & Sınav Kaygısı">Ergen Danışmanlığı & Sınav Kaygısı (12–18 Yaş)</option>
+                                                <option value="Eğitim & Kurumsal Seminer">Eğitim & Kurumsal Seminer Talebi</option>
+                                                <option value="İlk Değerlendirme & Klinik Görüşme">Genel Ön Değerlendirme & İlk Görüşme</option>
                                             </select>
                                         </div>
+                                    </div>
 
-                                        <div>
-                                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Uygun Saat Dilimi</label>
-                                            <div class="grid grid-cols-3 gap-2" id="time-slots-container">
-                                                <button type="button" onclick="selectTimeSlot(this)" class="time-slot-btn bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 py-2.5 px-3 rounded-xl text-xs text-center font-semibold transition">10:00</button>
-                                                <button type="button" onclick="selectTimeSlot(this)" class="time-slot-btn bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 py-2.5 px-3 rounded-xl text-xs text-center font-semibold transition">11:30</button>
-                                                <button type="button" onclick="selectTimeSlot(this)" class="time-slot-btn bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 py-2.5 px-3 rounded-xl text-xs text-center font-semibold transition">14:00</button>
-                                                <button type="button" onclick="selectTimeSlot(this)" class="time-slot-btn bg-[#0284C7] text-white border border-[#0284C7] py-2.5 px-3 rounded-xl text-xs font-bold text-center shadow transition">16:30</button>
-                                                <button type="button" onclick="selectTimeSlot(this)" class="time-slot-btn bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 py-2.5 px-3 rounded-xl text-xs text-center font-semibold transition">18:00</button>
-                                                <button type="button" onclick="selectTimeSlot(this)" class="time-slot-btn bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 py-2.5 px-3 rounded-xl text-xs text-center font-semibold transition">19:30</button>
-                                            </div>
+                                    <div>
+                                        <label class="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-2">
+                                            2. Görüşme Türü Tercihiniz
+                                        </label>
+                                        <div class="grid grid-cols-2 gap-3">
+                                            <label id="modality-card-face" class="p-3.5 rounded-xl border-2 border-[#0284C7] bg-[#E0F2FE]/40 cursor-pointer transition flex items-center gap-2.5 shadow-xs" onclick="selectModalityOption('Yüz Yüze (Bursa Nilüfer Kliniğimizde)', 'face')">
+                                                <input type="radio" name="selected_modality" value="Yüz Yüze (Bursa Nilüfer Kliniğimizde)" checked class="accent-[#0284C7] w-4 h-4 flex-shrink-0">
+                                                <div>
+                                                    <div class="font-bold text-xs sm:text-sm text-[#0F172A]">Yüz Yüze Seans</div>
+                                                    <div class="text-[11px] text-slate-600">Bursa Nilüfer Ofis</div>
+                                                </div>
+                                            </label>
+
+                                            <label id="modality-card-online" class="p-3.5 rounded-xl border-2 border-slate-200 hover:border-[#0284C7] bg-white cursor-pointer transition flex items-center gap-2.5 shadow-xs" onclick="selectModalityOption('Online Terapi (Görüntülü Görüşme)', 'online')">
+                                                <input type="radio" name="selected_modality" value="Online Terapi (Görüntülü Görüşme)" class="accent-[#0284C7] w-4 h-4 flex-shrink-0">
+                                                <div>
+                                                    <div class="font-bold text-xs sm:text-sm text-[#0F172A]">Online Seans</div>
+                                                    <div class="text-[11px] text-slate-600">Görüntülü Görüşme</div>
+                                                </div>
+                                            </label>
                                         </div>
                                     </div>
 
-                                    <!-- Patient Info -->
-                                    <div class="space-y-3">
-                                        <div>
-                                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Adınız Soyadınız *</label>
-                                            <input type="text" id="patient-name" placeholder="Örn: Selin Yılmaz" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white text-[#0F172A] text-sm focus:outline-none focus:border-[#0284C7]">
-                                        </div>
-                                        <div>
-                                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Telefon Numaranız *</label>
-                                            <input type="tel" id="patient-phone" placeholder="05XX XXX XX XX" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-white text-[#0F172A] text-sm focus:outline-none focus:border-[#0284C7]">
-                                        </div>
-                                        <div>
-                                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Kısa Notunuz (Opsiyonel)</label>
-                                            <textarea id="patient-note" rows="2" placeholder="Görüşme konusu veya tercih ettiğiniz saat..." class="w-full px-4 py-2 rounded-xl border border-slate-200 bg-white text-[#0F172A] text-sm focus:outline-none focus:border-[#0284C7]"></textarea>
-                                        </div>
+                                    <div>
+                                        <label for="patient-note" class="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-1.5">
+                                            Kısa Notunuz / Uygunluk Durumunuz <span class="text-slate-400 font-normal">(İsteğe Bağlı)</span>
+                                        </label>
+                                        <textarea id="patient-note" rows="2" placeholder="Örn: Hafta içi öğleden sonra uygunum, kısaca danışmak istediğim konu..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 bg-white text-[#0F172A] text-sm focus:outline-none focus:border-[#0284C7] transition"></textarea>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- Submit Options & Ayhan Altaş Reassurance Notice -->
-                            <div class="pt-4 border-t border-slate-100 space-y-3">
-                                <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
-                                    <button type="button" onclick="goToStep(3)" class="px-5 py-2.5 rounded-full text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition order-2 sm:order-1">
-                                        Geri
-                                    </button>
-                                    
-                                    <div class="flex items-center gap-3 w-full sm:w-auto order-1 sm:order-2">
-                                        <button type="button" onclick="submitAppointment('whatsapp')" class="btn-shimmer flex-1 sm:flex-initial px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg bg-[#25D366] hover:bg-[#20bd5a] text-white cursor-pointer hover:scale-[1.02] transition-transform">
-                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.077-1.127-.062-.265-.085-.595-.207-1.03-.397-1.848-.806-3.055-2.677-3.147-2.8-.093-.123-.746-.992-.746-1.893 0-.901.472-1.344.641-1.528.169-.184.368-.23.491-.23.123 0 .245.002.353.007.113.005.263-.043.412.316.153.37.521 1.272.568 1.365.046.092.077.2.015.323s-.092.2-.184.308c-.092.107-.193.24-.276.323-.092.093-.189.194-.082.378.107.184.478.788 1.026 1.274.706.628 1.3.822 1.485.914.184.092.292.077.4-.046.108-.123.461-.538.584-.723.123-.184.246-.153.415-.092.169.061 1.077.508 1.261.6.184.092.307.138.353.215.046.077.046.446-.098.851z"/></svg>
-                                            <span>WhatsApp ile Talep İlet</span>
-                                            <svg class="w-4 h-4 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                                        </button>
-                                        <button type="button" onclick="submitAppointment('direct')" class="btn-shimmer flex-1 sm:flex-initial px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg bg-[#0284C7] hover:bg-[#0369A1] text-white cursor-pointer hover:scale-[1.02] transition-transform">
-                                            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                <!-- RIGHT COLUMN: Contact Details & Action Buttons -->
+                                <div class="flex flex-col justify-between space-y-5 bg-[#F8FAFC] p-5 rounded-2xl border border-slate-200/80">
+                                    <div class="space-y-4">
+                                        <div>
+                                            <label for="patient-name" class="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-1.5">
+                                                3. Adınız Soyadınız *
+                                            </label>
+                                            <input type="text" id="patient-name" placeholder="Adınız ve Soyadınız" class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-[#0F172A] text-sm font-medium focus:outline-none focus:border-[#0284C7] transition">
+                                        </div>
+                                        <div>
+                                            <label for="patient-phone" class="block text-xs font-bold uppercase tracking-wider text-[#0F172A] mb-1.5">
+                                                4. Telefon Numaranız *
+                                            </label>
+                                            <input type="tel" id="patient-phone" placeholder="05XX XXX XX XX" class="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-[#0F172A] text-sm font-medium focus:outline-none focus:border-[#0284C7] transition">
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit Buttons -->
+                                    <div class="space-y-2.5 pt-2">
+                                        <button type="button" onclick="submitAppointment('direct')" class="btn-shimmer w-full py-3.5 px-6 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-md bg-[#0284C7] hover:bg-[#0369A1] text-white cursor-pointer hover:scale-[1.01] transition-all">
+                                            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                                             <span>Randevu Talebi Oluştur</span>
                                             <svg class="w-4 h-4 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                                         </button>
+
+                                        <button type="button" onclick="submitAppointment('whatsapp')" class="w-full py-3 px-5 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-sm cursor-pointer transition-all">
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.077-1.127-.062-.265-.085-.595-.207-1.03-.397-1.848-.806-3.055-2.677-3.147-2.8-.093-.123-.746-.992-.746-1.893 0-.901.472-1.344.641-1.528.169-.184.368-.23.491-.23.123 0 .245.002.353.007.113.005.263-.043.412.316.153.37.521 1.272.568 1.365.046.092.077.2.015.323s-.092.2-.184.308c-.092.107-.193.24-.276.323-.092.093-.189.194-.082.378.107.184.478.788 1.026 1.274.706.628 1.3.822 1.485.914.184.092.292.077.4-.046.108-.123.461-.538.584-.723.123-.184.246-.153.415-.092.169.061 1.077.508 1.261.6.184.092.307.138.353.215.046.077.046.446-.098.851z"/></svg>
+                                            <span>WhatsApp Üzerinden Hızlı İlet</span>
+                                        </button>
                                     </div>
                                 </div>
 
-                                <!-- Ayhan Altaş Reassurance Notice: Exact requested wording -->
-                                <div class="p-3.5 rounded-2xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center gap-2.5 text-xs text-[#0369A1] font-medium text-center">
-                                    <svg class="w-4 h-4 text-[#0284C7] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                                    <span>Randevu talebi oluşturulduktan sonra talebiniz kurum tarafından değerlendirilip size dönüş yapılacaktır.</span>
-                                </div>
+                            </div>
+
+                            <!-- Ayhan Altaş Reassurance Notice: Exact requested wording -->
+                            <div class="p-3.5 rounded-2xl bg-[#E0F2FE] border border-[#BAE6FD] flex items-center justify-center gap-2.5 text-xs sm:text-sm text-[#0F172A] font-semibold text-center">
+                                <svg class="w-4 h-4 text-[#0284C7] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                                <span>Randevu talebi oluşturulduktan sonra talebiniz kurum tarafından değerlendirilip size dönüş yapılacaktır.</span>
                             </div>
                         </div>
 
-                        <!-- STEP 5: Success Confirmation -->
+                        <!-- SUCCESS CONFIRMATION VIEW (Same Fixed Container Height) -->
                         <div id="booking-step-success" class="flex-1 flex flex-col justify-center py-10 text-center space-y-4 hidden">
                             <div class="w-16 h-16 rounded-full bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center text-3xl mx-auto shadow-md">
                                 <svg class="w-8 h-8 text-[#0284C7]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
@@ -2872,12 +2688,12 @@
                             <h3 class="font-serif text-3xl font-bold text-[#0F172A]">
                                 Randevu Talebiniz Alındı
                             </h3>
-                            <p class="text-sm text-slate-600 max-w-md mx-auto" id="success-message">
+                            <p class="text-sm sm:text-base text-slate-700 font-medium max-w-md mx-auto leading-relaxed" id="success-message">
                                 Randevu talebiniz oluşturuldu. Talebiniz kurumumuz tarafından değerlendirilip size en kısa sürede dönüş yapılacaktır.
                             </p>
                             <div class="pt-4">
-                                <button type="button" onclick="resetBookingStepper()" class="btn-shimmer px-6 py-2.5 rounded-full text-xs font-semibold bg-[#0284C7] hover:bg-[#0369A1] text-white shadow transition">
-                                    Yeni Randevu Planla
+                                <button type="button" onclick="resetBookingStepper()" class="btn-shimmer px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-[#0284C7] hover:bg-[#0369A1] text-white shadow transition">
+                                    Yeni Randevu Talebi Oluştur
                                 </button>
                             </div>
                         </div>
@@ -2889,9 +2705,9 @@
 
             <!-- Hotline Link -->
             <div class="mt-8 text-center">
-                <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#D5C0A3] shadow-sm text-xs text-[#332D28]">
+                <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#BAE6FD] shadow-sm text-xs sm:text-sm text-[#0F172A] font-medium">
                     <span>Doğrudan kliniğimizi aramak isterseniz:</span>
-                    <a href="tel:+905370212508" class="text-[#7C5930] font-bold underline hover:text-[#161412]">0537 021 25 08</a>
+                    <a href="tel:+905370212508" class="text-[#0284C7] font-extrabold underline hover:text-[#0369A1]">0537 021 25 08</a>
                 </div>
             </div>
 
@@ -3087,7 +2903,7 @@
                         <span>0537 021 25 08</span>
                     </a>
                     <a href="#randevu-al" class="btn-shimmer px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 bg-[#0284C7] hover:bg-[#0369A1] text-white cursor-pointer hover:scale-105 transition-transform shadow-lg">
-                        <span>Online Randevu Takvimi</span>
+                        <span>Randevu Talebi Oluştur</span>
                         <span class="font-bold">&rarr;</span>
                     </a>
                 </div>
@@ -3156,7 +2972,7 @@
                         <li><a href="#makaleler" class="hover:text-[#0284C7] transition block">Klinik Makaleler & Yazılar</a></li>
                         <li><a href="#danisan-yorumlari" class="hover:text-[#0284C7] transition block">Danışan Yorumları (5.0 / 5)</a></li>
                         <li><a href="#sss" class="hover:text-[#0284C7] transition block">Sıkça Sorulan Sorular</a></li>
-                        <li><a href="#randevu-al" class="hover:text-[#0284C7] transition block font-bold text-[#0284C7]">Randevu Takvimi &rarr;</a></li>
+                        <li><a href="#randevu-al" class="hover:text-[#0284C7] transition block font-bold text-[#0284C7]">Randevu Talebi Oluştur &rarr;</a></li>
                     </ul>
                 </div>
 
@@ -4562,127 +4378,61 @@
 
         document.querySelectorAll('.reveal-item').forEach(el => revealObserver.observe(el));
 
-        // 9. APPOINTMENT STEPPER ENGINE
+        // 9. SINGLE-SCREEN APPOINTMENT REQUEST ENGINE (Zero Layout Shift)
         const bookingState = {
-            step: 1,
             service: 'EMDR Terapisi',
-            doctor: 'Uzm. Psk. Ayhan Altaş (EMDR & Klinik Psikoterapi)',
+            doctor: 'Uzm. Psk. Ayhan Altaş',
             modality: 'Yüz Yüze (Bursa Nilüfer Kliniğimizde)',
-            date: 'Bugün (Aynı Gün Kontenjanı)',
-            time: '16:30',
             name: '',
             phone: '',
             note: ''
         };
 
-        function animatedSlotSelect(btnEl, doctor, slotText) {
-            btnEl.classList.add('slot-active-anim');
-            const feedbackBox = document.getElementById('hero-slot-feedback');
-            const feedbackText = document.getElementById('hero-slot-feedback-text');
+        function selectModalityOption(modalityValue, cardType) {
+            bookingState.modality = modalityValue;
+            const faceCard = document.getElementById('modality-card-face');
+            const onlineCard = document.getElementById('modality-card-online');
+            if (!faceCard || !onlineCard) return;
 
-            if (feedbackBox && feedbackText) {
-                feedbackText.innerText = `${slotText} seansı seçildi, randevu adımına geçiliyor...`;
-                feedbackBox.classList.remove('hidden');
-                feedbackBox.classList.add('flex');
-            }
-
-            bookingState.time = slotText.includes('16:30') ? '16:30' : '18:00';
-
-            setTimeout(() => {
-                goToStep(4);
-                document.getElementById('randevu-al').scrollIntoView({ behavior: 'smooth' });
-                showToast(`Uzm. Psk. Ayhan Altaş için ${slotText} seansı seçildi.`);
-                setTimeout(() => {
-                    btnEl.classList.remove('slot-active-anim');
-                    if (feedbackBox) {
-                        feedbackBox.classList.add('hidden');
-                        feedbackBox.classList.remove('flex');
-                    }
-                }, 1200);
-            }, 500);
-        }
-
-        function animatedExploreAllSlots(btnEl) {
-            const label = document.getElementById('explore-slots-label');
-            if (label) label.innerText = 'Müsait Takvim Yükleniyor...';
-            btnEl.classList.add('slot-active-anim');
-
-            setTimeout(() => {
-                goToStep(1);
-                document.getElementById('randevu-al').scrollIntoView({ behavior: 'smooth' });
-                if (label) label.innerText = 'Tüm Müsait Saatleri İncele';
-                btnEl.classList.remove('slot-active-anim');
-            }, 400);
-        }
-
-        function goToStep(step) {
-            if (step === 2) {
-                const s = document.querySelector('input[name="selected_service"]:checked');
-                if (s) bookingState.service = s.value;
-            } else if (step === 3) {
-                const d = document.querySelector('input[name="selected_doctor"]:checked');
-                if (d) bookingState.doctor = d.value;
-            } else if (step === 4) {
-                const m = document.querySelector('input[name="selected_modality"]:checked');
-                if (m) bookingState.modality = m.value;
-                updateSummaryText();
-            }
-
-            bookingState.step = step;
-
-            for (let i = 1; i <= 4; i++) {
-                const el = document.getElementById(`booking-step-${i}`);
-                if (el) el.classList.add('hidden');
-            }
-            document.getElementById('booking-step-success').classList.add('hidden');
-            document.getElementById(`booking-step-${step}`).classList.remove('hidden');
-
-            for (let i = 1; i <= 4; i++) {
-                const ind = document.getElementById(`step-ind-${i}`);
-                const circle = ind.querySelector('span:first-child');
-                const label = ind.querySelector('span:last-child');
-                const bar = document.getElementById(`step-bar-${i-1}`);
-
-                if (i <= step) {
-                    circle.className = 'w-8 h-8 rounded-full bg-[#0284C7] text-white flex items-center justify-center font-bold text-xs shadow-md';
-                    if (label) label.className = 'text-xs font-bold uppercase tracking-wider text-[#0284C7] hidden sm:inline';
-                    if (bar) bar.className = 'h-0.5 flex-1 mx-3 bg-[#0284C7]';
-                } else {
-                    circle.className = 'w-8 h-8 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center font-bold text-xs';
-                    if (label) label.className = 'text-xs font-bold uppercase tracking-wider text-slate-400 hidden sm:inline';
-                    if (bar) bar.className = 'h-0.5 flex-1 mx-3 bg-slate-200';
-                }
-            }
-        }
-
-        function updateSummaryText() {
-            const summary = document.getElementById('summary-text');
-            if (summary) {
-                summary.innerHTML = `<span class="text-[#0F172A] font-bold">${bookingState.doctor}</span> &bull; <span class="text-[#0284C7] font-semibold">${bookingState.service}</span> &bull; <span class="text-slate-600 font-medium">${bookingState.modality}</span>`;
+            if (cardType === 'online') {
+                onlineCard.className = 'p-3.5 rounded-xl border-2 border-[#0284C7] bg-[#E0F2FE]/40 cursor-pointer transition flex items-center gap-2.5 shadow-xs';
+                faceCard.className = 'p-3.5 rounded-xl border-2 border-slate-200 hover:border-[#0284C7] bg-white cursor-pointer transition flex items-center gap-2.5 shadow-xs';
+                const radio = onlineCard.querySelector('input[type="radio"]');
+                if (radio) radio.checked = true;
+            } else {
+                faceCard.className = 'p-3.5 rounded-xl border-2 border-[#0284C7] bg-[#E0F2FE]/40 cursor-pointer transition flex items-center gap-2.5 shadow-xs';
+                onlineCard.className = 'p-3.5 rounded-xl border-2 border-slate-200 hover:border-[#0284C7] bg-white cursor-pointer transition flex items-center gap-2.5 shadow-xs';
+                const radio = faceCard.querySelector('input[type="radio"]');
+                if (radio) radio.checked = true;
             }
         }
 
         function selectServiceForAppointment(serviceName) {
             bookingState.service = serviceName;
-            const rad = document.querySelector(`input[name="selected_service"][value="${serviceName}"]`);
-            if (rad) rad.checked = true;
-            goToStep(2);
+            const selectEl = document.getElementById('booking-service');
+            if (selectEl) {
+                selectEl.value = serviceName;
+                selectEl.classList.add('ring-4', 'ring-[#0284C7]/30');
+                setTimeout(() => selectEl.classList.remove('ring-4', 'ring-[#0284C7]/30'), 1400);
+            }
+            if (serviceName === 'Online Danışmanlık') {
+                selectModalityOption('Online Terapi (Görüntülü Görüşme)', 'online');
+            }
+            const formView = document.getElementById('booking-form-view');
+            const successEl = document.getElementById('booking-step-success');
+            if (formView && successEl) {
+                formView.classList.remove('hidden');
+                successEl.classList.add('hidden');
+            }
             document.getElementById('randevu-al').scrollIntoView({ behavior: 'smooth' });
-            showToast(`${serviceName} seçildi.`);
-        }
-
-        function selectTimeSlot(btn) {
-            document.querySelectorAll('.time-slot-btn').forEach(b => {
-                b.className = 'time-slot-btn bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 py-2.5 px-3 rounded-xl text-xs text-center font-semibold transition';
-            });
-            btn.className = 'time-slot-btn bg-[#0284C7] text-white border border-[#0284C7] py-2.5 px-3 rounded-xl text-xs font-bold text-center shadow transition';
-            bookingState.time = btn.innerText.trim();
+            showToast(`${serviceName} seçildi. İletişim bilgilerinizi girerek talebinizi iletebilirsiniz.`);
         }
 
         function submitAppointment(channel) {
             const name = document.getElementById('patient-name').value.trim();
             const phone = document.getElementById('patient-phone').value.trim();
-            const date = document.getElementById('booking-date').value;
+            const serviceEl = document.getElementById('booking-service');
+            const modalityEl = document.querySelector('input[name="selected_modality"]:checked');
             const note = document.getElementById('patient-note').value.trim();
 
             if (!name || !phone) {
@@ -4690,21 +4440,22 @@
                 return;
             }
 
+            if (serviceEl) bookingState.service = serviceEl.value;
+            if (modalityEl) bookingState.modality = modalityEl.value;
             bookingState.name = name;
             bookingState.phone = phone;
-            bookingState.date = date;
             bookingState.note = note;
 
             if (channel === 'whatsapp') {
-                const message = `Merhaba Uzm. Psk. Ayhan Altaş,%0A%0AWeb siteniz üzerinden bir *randevu talebi* oluşturdum:%0A- *Danışan:* ${name}%0A- *Telefon:* ${phone}%0A- *Hizmet:* ${bookingState.service}%0A- *Protokol:* ${bookingState.doctor}%0A- *Görüşme Türü:* ${bookingState.modality}%0A- *Tercih Edilen Zaman:* ${date} - ${bookingState.time}%0A${note ? `- *Not:* ${note}%0A` : ''}%0AMüsaitlik ve randevu değerlendirmesi rica ederim.`;
+                const message = `Merhaba Uzm. Psk. Ayhan Altaş,%0A%0AWeb siteniz üzerinden bir *randevu talebi* oluşturdum:%0A- *Danışan:* ${name}%0A- *Telefon:* ${phone}%0A- *Danışmanlık Konusu:* ${bookingState.service}%0A- *Görüşme Türü:* ${bookingState.modality}%0A${note ? `- *Not / Uygunluk:* ${note}%0A` : ''}%0AKurumunuz tarafından değerlendirilip uygun seans planlaması için dönüş yapılmasını rica ederim.`;
                 window.open(`https://wa.me/905370212508?text=${message}`, '_blank');
             }
 
-            for (let i = 1; i <= 4; i++) {
-                document.getElementById(`booking-step-${i}`).classList.add('hidden');
-            }
+            const formView = document.getElementById('booking-form-view');
             const successEl = document.getElementById('booking-step-success');
-            successEl.classList.remove('hidden');
+            if (formView) formView.classList.add('hidden');
+            if (successEl) successEl.classList.remove('hidden');
+
             document.getElementById('success-message').innerText = `Sayın ${name}, randevu talebiniz alınmıştır. Talebiniz kurumumuz tarafından değerlendirilip size en kısa sürede dönüş yapılacaktır.`;
             showToast('Randevu talebiniz iletildi. Tarafınıza dönüş yapılacaktır.');
         }
@@ -4713,7 +4464,10 @@
             document.getElementById('patient-name').value = '';
             document.getElementById('patient-phone').value = '';
             document.getElementById('patient-note').value = '';
-            goToStep(1);
+            const formView = document.getElementById('booking-form-view');
+            const successEl = document.getElementById('booking-step-success');
+            if (successEl) successEl.classList.add('hidden');
+            if (formView) formView.classList.remove('hidden');
         }
 
         function toggleFaq(btn) {
