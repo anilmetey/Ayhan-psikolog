@@ -45,19 +45,27 @@
         // 2. Apply initial mood (MOOD_LABELS is safely defined above)
         applyMood(currentMood, false);
 
-        // 3. Expose global toggleAtmosphere handler for direct HTML onclick
+        let lastToggleTime = 0;
+
+        // 3. Expose global toggleAtmosphere handler for direct HTML onclick or external calls
         window.toggleAtmosphere = function (e) {
             if (e) {
-                e.preventDefault();
-                e.stopPropagation();
+                if (typeof e.preventDefault === 'function') e.preventDefault();
+                if (typeof e.stopPropagation === 'function') e.stopPropagation();
             }
+            const now = Date.now();
+            if (now - lastToggleTime < 250) {
+                return; // Prevent duplicate toggle from inline onclick + addEventListener firing simultaneously
+            }
+            lastToggleTime = now;
+
             const isOpen = chipsTray.classList.toggle('is-open');
             toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
             toggleBtn.classList.toggle('is-active', isOpen);
         };
 
-        // Also bind event listener
-        toggleBtn.addEventListener('click', window.toggleAtmosphere);
+        // Bind single robust click listener
+        toggleBtn.onclick = window.toggleAtmosphere;
 
         // 4. Handle mood chip clicks & hover preview
         chipButtons.forEach(function (btn) {
