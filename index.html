@@ -2605,7 +2605,7 @@
                                     <div class="space-y-2.5 pt-2">
                                         <button type="button" onclick="submitAppointment('email')" class="btn-shimmer w-full py-3.5 px-6 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-md bg-[#0284C7] hover:bg-[#0369A1] text-white cursor-pointer hover:scale-[1.01] transition-all">
                                             <svg class="w-4 h-4 text-white flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                            <span>Randevu Talebi Oluştur (E-Posta)</span>
+                                            <span>E-Posta ile Randevu Talebi İlet</span>
                                             <svg class="w-4 h-4 text-white/90 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                                         </button>
 
@@ -2613,6 +2613,10 @@
                                             <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.077-1.127-.062-.265-.085-.595-.207-1.03-.397-1.848-.806-3.055-2.677-3.147-2.8-.093-.123-.746-.992-.746-1.893 0-.901.472-1.344.641-1.528.169-.184.368-.23.491-.23.123 0 .245.002.353.007.113.005.263-.043.412.316.153.37.521 1.272.568 1.365.046.092.077.2.015.323s-.092.2-.184.308c-.092.107-.193.24-.276.323-.092.093-.189.194-.082.378.107.184.478.788 1.026 1.274.706.628 1.3.822 1.485.914.184.092.292.077.4-.046.108-.123.461-.538.584-.723.123-.184.246-.153.415-.092.169.061 1.077.508 1.261.6.184.092.307.138.353.215.046.077.046.446-.098.851z"/></svg>
                                             <span>WhatsApp Üzerinden Hızlı İlet</span>
                                         </button>
+
+                                        <p class="text-[11px] text-slate-500 text-center font-medium leading-snug pt-1">
+                                            * Butona tıkladığınızda metniniz hazır taslak olarak açılır. Talebinizin iletilmesi için açılan ekranda <strong>&ldquo;Gönder&rdquo;</strong> tuşuna basmanız gerekmektedir.
+                                        </p>
                                     </div>
                                 </div>
 
@@ -2625,20 +2629,56 @@
                             </div>
                         </div>
 
-                        <!-- SUCCESS CONFIRMATION VIEW (Same Fixed Container Height) -->
-                        <div id="booking-step-success" class="flex-1 flex flex-col justify-center py-10 text-center space-y-4 hidden">
-                            <div class="w-16 h-16 rounded-full bg-[#E0F2FE] text-[#0284C7] flex items-center justify-center text-3xl mx-auto shadow-md">
-                                <svg class="w-8 h-8 text-[#0284C7]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                        <!-- PENDING DISPATCH CONFIRMATION (Truthful, Clear & User-Controlled) -->
+                        <div id="booking-step-success" class="flex-1 flex flex-col justify-center py-6 text-center space-y-4 hidden">
+                            <!-- Pending / Dispatch Plane Icon -->
+                            <div class="relative w-16 h-16 rounded-full bg-[#E0F2FE] border-2 border-[#0284C7] text-[#0284C7] flex items-center justify-center text-2xl mx-auto shadow-sm">
+                                <svg class="w-8 h-8 text-[#0284C7] transform translate-x-0.5 -translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                                </svg>
+                                <span class="absolute -top-1 -right-1 flex h-4 w-4">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-4 w-4 bg-amber-500 border-2 border-white"></span>
+                                </span>
                             </div>
-                            <h3 class="font-serif text-3xl font-bold text-[#0F172A]">
-                                Randevu Talebiniz Alındı
-                            </h3>
-                            <p class="text-sm sm:text-base text-slate-700 font-medium max-w-md mx-auto leading-relaxed" id="success-message">
-                                Randevu talebiniz oluşturuldu. Talebiniz kurumumuz tarafından değerlendirilip size en kısa sürede dönüş yapılacaktır.
-                            </p>
-                            <div class="pt-4">
-                                <button type="button" onclick="resetBookingStepper()" class="btn-shimmer px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-[#0284C7] hover:bg-[#0369A1] text-white shadow transition">
-                                    Yeni Randevu Talebi Oluştur
+
+                            <div class="space-y-1.5">
+                                <span class="inline-block px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-[11px] font-bold tracking-wider uppercase">
+                                    Son Adım: Gönderme Onayı Bekleniyor
+                                </span>
+                                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-[#0F172A]" id="pending-title">
+                                    Randevu Taslağınız Hazırlandı
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-600 max-w-md mx-auto" id="pending-desc">
+                                    Randevu talebi metniniz uygulamanıza aktarıldı.
+                                </p>
+                            </div>
+
+                            <!-- Truthful Warning Card (Addresses User's Exact Feedback) -->
+                            <div class="max-w-md mx-auto p-4 rounded-xl bg-amber-50/90 border-2 border-amber-300 text-left space-y-1.5 shadow-xs">
+                                <div class="flex items-center gap-2 text-amber-900 font-bold text-xs uppercase tracking-wide">
+                                    <svg class="w-4 h-4 text-amber-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                                    <span>Talebinizin Kliniğe Ulaşması İçin:</span>
+                                </div>
+                                <p class="text-xs text-amber-900 leading-relaxed font-medium">
+                                    Lütfen açılan uygulamada <strong>&ldquo;GÖNDER&rdquo;</strong> butonuna basarak randevu talebinizi iletiniz. <strong>Göndermediğiniz veya taslakta beklettiğiniz sürece talebiniz kliniğimize ulaşmaz.</strong>
+                                </p>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+                                <button type="button" onclick="reopenAppointmentDispatch()" class="btn-shimmer px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-[#0284C7] hover:bg-[#0369A1] text-white shadow-sm transition flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                                    <span>Uygulamayı Tekrar Aç</span>
+                                </button>
+
+                                <button type="button" onclick="copyAppointmentText()" class="px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-white border border-slate-300 hover:border-[#0284C7] text-slate-700 hover:text-[#0284C7] shadow-sm transition flex items-center gap-2">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                    <span id="copy-btn-label">Metni Kopyala</span>
+                                </button>
+
+                                <button type="button" onclick="returnToBookingForm()" class="px-4 py-2.5 rounded-xl text-xs font-bold text-slate-600 hover:text-[#0284C7] transition">
+                                    ← Bilgileri Düzenle / Forma Dön
                                 </button>
                             </div>
                         </div>
@@ -4392,6 +4432,11 @@
             showToast(`${serviceName} seçildi. İletişim bilgilerinizi girerek talebinizi iletebilirsiniz.`);
         }
 
+        let lastAppointmentChannel = 'email';
+        let lastAppointmentWaUrl = '';
+        let lastAppointmentMailtoUrl = '';
+        let lastAppointmentRawText = '';
+
         function submitAppointment(channel) {
             const name = document.getElementById('patient-name').value.trim();
             const phone = document.getElementById('patient-phone').value.trim();
@@ -4410,33 +4455,77 @@
             bookingState.phone = phone;
             bookingState.note = note;
 
+            lastAppointmentChannel = channel;
+            const channelName = channel === 'whatsapp' ? 'WhatsApp' : 'E-Posta';
+
+            // Raw text representation for copying
+            lastAppointmentRawText = `Uzm. Klinik Psk. Ayhan Altaş - Randevu Talebi\n` +
+                `• Danışan: ${name}\n` +
+                `• Telefon: ${phone}\n` +
+                `• Konu: ${bookingState.service}\n` +
+                `• Görüşme Türü: ${bookingState.modality}\n` +
+                (note ? `• Not: ${note}\n` : '') +
+                `\nUygun seans planlaması için dönüş yapılmasını rica ederim.`;
+
             if (channel === 'whatsapp') {
-                const message = `Merhaba Uzm. Psk. Ayhan Altaş,%0A%0AWeb siteniz üzerinden bir *randevu talebi* oluşturdum:%0A- *Danışan:* ${name}%0A- *Telefon:* ${phone}%0A- *Danışmanlık Konusu:* ${bookingState.service}%0A- *Görüşme Türü:* ${bookingState.modality}%0A${note ? `- *Not / Uygunluk:* ${note}%0A` : ''}%0AKurumunuz tarafından değerlendirilip uygun seans planlaması için dönüş yapılmasını rica ederim.`;
-                window.open(`https://wa.me/905370212508?text=${message}`, '_blank');
+                const message = encodeURIComponent(`Merhaba Uzm. Psk. Ayhan Altaş,\n\nWeb siteniz üzerinden bir *randevu talebi* oluşturdum:\n- *Danışan:* ${name}\n- *Telefon:* ${phone}\n- *Danışmanlık Konusu:* ${bookingState.service}\n- *Görüşme Türü:* ${bookingState.modality}\n${note ? `- *Not / Uygunluk:* ${note}\n` : ''}\nKurumunuz tarafından değerlendirilip uygun seans planlaması için dönüş yapılmasını rica ederim.`);
+                lastAppointmentWaUrl = `https://wa.me/905370212508?text=${message}`;
+                window.open(lastAppointmentWaUrl, '_blank');
             } else {
                 const subject = encodeURIComponent(`Randevu Talebi - ${name} (${bookingState.service})`);
                 const bodyText = `Merhaba Uzm. Psk. Ayhan Altaş,\n\nWeb siteniz üzerinden bir randevu talebi oluşturmak istiyorum:\n\n• Danışan Adı Soyadı: ${name}\n• Telefon Numarası: ${phone}\n• Danışmanlık Konusu: ${bookingState.service}\n• Görüşme Türü: ${bookingState.modality}${note ? `\n• Not / Uygunluk Durumu: ${note}` : ''}\n\nTalebin değerlendirilip uygun seans planlaması için dönüş yapılmasını rica ederim.\n\nSaygılarımla,\n${name}`;
-                const mailtoUrl = `mailto:psikologayhan@gmail.com?cc=bursapozitifyasam@gmail.com&subject=${subject}&body=${encodeURIComponent(bodyText)}`;
-                window.location.href = mailtoUrl;
+                lastAppointmentMailtoUrl = `mailto:psikologayhan@gmail.com?cc=bursapozitifyasam@gmail.com&subject=${subject}&body=${encodeURIComponent(bodyText)}`;
+                window.location.href = lastAppointmentMailtoUrl;
             }
 
             const formView = document.getElementById('booking-form-view');
-            const successEl = document.getElementById('booking-step-success');
+            const pendingEl = document.getElementById('booking-step-success');
             if (formView) formView.classList.add('hidden');
-            if (successEl) successEl.classList.remove('hidden');
+            if (pendingEl) pendingEl.classList.remove('hidden');
 
-            document.getElementById('success-message').innerText = `Sayın ${name}, randevu talebi metniniz hazırlandı. Açılan ekran üzerinden gönder tuşuna basarak talebinizi iletebilirsiniz; kurumumuz değerlendirip size dönüş yapacaktır.`;
-            showToast('Randevu talebi metniniz hazırlandı.');
+            const descEl = document.getElementById('pending-desc');
+            if (descEl) {
+                descEl.innerHTML = `Sayın <strong class="text-[#0F172A]">${name}</strong>, randevu metniniz <strong class="text-[#0284C7]">${channelName}</strong> uygulamanıza aktarıldı.`;
+            }
+
+            showToast(`${channelName} taslağınız açıldı. Lütfen 'Gönder'e basınız.`);
+        }
+
+        function reopenAppointmentDispatch() {
+            if (lastAppointmentChannel === 'whatsapp' && lastAppointmentWaUrl) {
+                window.open(lastAppointmentWaUrl, '_blank');
+            } else if (lastAppointmentMailtoUrl) {
+                window.location.href = lastAppointmentMailtoUrl;
+            }
+        }
+
+        function copyAppointmentText() {
+            if (!lastAppointmentRawText) return;
+            navigator.clipboard.writeText(lastAppointmentRawText).then(() => {
+                const label = document.getElementById('copy-btn-label');
+                if (label) {
+                    const original = label.innerText;
+                    label.innerText = 'Kopyalandı! ✓';
+                    setTimeout(() => { label.innerText = original; }, 2500);
+                }
+                showToast('Randevu metni panoya kopyalandı.');
+            }).catch(() => {
+                showToast('Kopyalama başarısız oldu.');
+            });
+        }
+
+        function returnToBookingForm() {
+            const formView = document.getElementById('booking-form-view');
+            const pendingEl = document.getElementById('booking-step-success');
+            if (pendingEl) pendingEl.classList.add('hidden');
+            if (formView) formView.classList.remove('hidden');
         }
 
         function resetBookingStepper() {
             document.getElementById('patient-name').value = '';
             document.getElementById('patient-phone').value = '';
             document.getElementById('patient-note').value = '';
-            const formView = document.getElementById('booking-form-view');
-            const successEl = document.getElementById('booking-step-success');
-            if (successEl) successEl.classList.add('hidden');
-            if (formView) formView.classList.remove('hidden');
+            returnToBookingForm();
         }
 
         function toggleFaq(btn) {
